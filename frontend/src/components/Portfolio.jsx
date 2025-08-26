@@ -452,27 +452,27 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative overflow-hidden">
+      <section id="contact" className="py-24 px-6 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-gradient-to-br from-emerald-200/20 to-teal-200/20 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full bg-gradient-to-br from-teal-200/20 to-cyan-200/20 blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full bg-gradient-to-br from-purple-500/10 to-indigo-500/10 blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-5xl font-light text-slate-800 mb-16 text-center">
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Let's Connect</span>
+          <h2 className="text-5xl font-light text-white mb-16 text-center">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Let's Connect</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="group hover:shadow-2xl transition-all duration-500 border-emerald-200 bg-white/90 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Card className="group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border-slate-700 bg-slate-800/90 backdrop-blur-sm relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors duration-300">
+                <CardTitle className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                   Send a Message
                 </CardTitle>
-                <CardDescription className="group-hover:text-teal-600 transition-colors duration-300">
+                <CardDescription className="text-slate-400 group-hover:text-purple-400 transition-colors duration-300">
                   I'd love to hear about your next project
                 </CardDescription>
               </CardHeader>
@@ -486,7 +486,7 @@ const Portfolio = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full border-emerald-200 focus:border-emerald-400 focus:ring-emerald-400 hover:border-emerald-300 transition-colors duration-200"
+                      className="w-full bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 hover:border-slate-500 transition-colors duration-200"
                     />
                   </div>
                   <div>
@@ -497,7 +497,7 @@ const Portfolio = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full border-emerald-200 focus:border-emerald-400 focus:ring-emerald-400 hover:border-emerald-300 transition-colors duration-200"
+                      className="w-full bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 hover:border-slate-500 transition-colors duration-200"
                     />
                   </div>
                   <div>
@@ -507,13 +507,13 @@ const Portfolio = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
-                      className="w-full min-h-32 border-emerald-200 focus:border-emerald-400 focus:ring-emerald-400 hover:border-emerald-300 transition-colors duration-200"
+                      className="w-full min-h-32 bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 hover:border-slate-500 transition-colors duration-200"
                     />
                   </div>
                   <Button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg hover:shadow-emerald-200 group/btn"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg hover:shadow-blue-500/25 group/btn"
                   >
                     {isSubmitting ? (
                       <>
@@ -530,33 +530,33 @@ const Portfolio = () => {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <Card className="group hover:shadow-2xl transition-all duration-500 border-teal-200 bg-white/90 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card className="group hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 border-slate-700 bg-slate-800/90 backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-teal-700 transition-colors duration-300">
+                  <CardTitle className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
                     Contact Information
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 relative z-10">
-                  <div className="flex items-center space-x-3 text-slate-600 group-hover:text-slate-700 transition-colors duration-300 hover:translate-x-1">
-                    <Mail className="w-5 h-5 text-emerald-500" />
-                    <span>productmanager@email.com</span>
+                  <div className="flex items-center space-x-3 text-slate-300 group-hover:text-slate-200 transition-colors duration-300 hover:translate-x-1">
+                    <Mail className="w-5 h-5 text-blue-400" />
+                    <span>prakrati@email.com</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-slate-600 group-hover:text-slate-700 transition-colors duration-300 hover:translate-x-1">
-                    <Phone className="w-5 h-5 text-teal-500" />
+                  <div className="flex items-center space-x-3 text-slate-300 group-hover:text-slate-200 transition-colors duration-300 hover:translate-x-1">
+                    <Phone className="w-5 h-5 text-purple-400" />
                     <span>+1 (555) 123-4567</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-slate-600 group-hover:text-slate-700 transition-colors duration-300 hover:translate-x-1">
-                    <MapPin className="w-5 h-5 text-cyan-500" />
+                  <div className="flex items-center space-x-3 text-slate-300 group-hover:text-slate-200 transition-colors duration-300 hover:translate-x-1">
+                    <MapPin className="w-5 h-5 text-indigo-400" />
                     <span>San Francisco, CA</span>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="group hover:shadow-2xl transition-all duration-500 border-cyan-200 bg-white/90 backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card className="group hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 border-slate-700 bg-slate-800/90 backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-cyan-700 transition-colors duration-300">
+                  <CardTitle className="text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors duration-300">
                     Professional Links
                   </CardTitle>
                 </CardHeader>
@@ -579,9 +579,9 @@ const Portfolio = () => {
                 </CardContent>
               </Card>
 
-              <div className="bg-gradient-to-br from-emerald-100 to-teal-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-emerald-200">
-                <h3 className="font-semibold text-slate-800 mb-2 text-emerald-700">Ready to collaborate?</h3>
-                <p className="text-slate-600 text-sm">
+              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700">
+                <h3 className="font-semibold text-white mb-2 text-blue-400">Ready to collaborate?</h3>
+                <p className="text-slate-300 text-sm">
                   I'm always interested in discussing new opportunities, innovative projects, and potential collaborations. Let's build something amazing together!
                 </p>
               </div>
@@ -591,10 +591,10 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-emerald-200 bg-gradient-to-r from-slate-50 to-emerald-50">
-        <div className="max-w-6xl mx-auto text-center text-slate-600">
-          <p className="hover:text-emerald-600 transition-colors duration-300">
-            &copy; 2024 Product Manager Portfolio. Crafted with passion for great products.
+      <footer className="py-12 px-6 border-t border-slate-700 bg-gradient-to-r from-slate-900 to-slate-800">
+        <div className="max-w-6xl mx-auto text-center text-slate-400">
+          <p className="hover:text-blue-400 transition-colors duration-300">
+            &copy; 2024 Prakrati Chaudhary Portfolio. Crafted with passion for great products.
           </p>
         </div>
       </footer>
@@ -603,7 +603,7 @@ const Portfolio = () => {
       {showScrollTop && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-full p-3 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-emerald-200 group"
+          className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full p-3 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 group"
         >
           <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform duration-200" />
         </Button>
