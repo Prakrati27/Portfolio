@@ -196,51 +196,62 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-6">
+      <section id="skills" className="py-24 px-6 bg-white relative">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-light text-gray-900 mb-16 text-center">Skills & Expertise</h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-gray-900">Product Management</CardTitle>
+          <h2 className="text-5xl font-light text-slate-800 mb-16 text-center">
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Skills & Expertise</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-emerald-100 hover:border-emerald-300 bg-gradient-to-br from-white to-emerald-50/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardHeader className="relative z-10">
+                <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors duration-300">
+                  Product Management
+                </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Roadmap & Strategy</Badge>
-                  <Badge variant="secondary">Adoption & Retention Growth</Badge>
-                  <Badge variant="secondary">Pricing & Packaging</Badge>
-                  <Badge variant="secondary">GTM Planning</Badge>
-                  <Badge variant="secondary">Feature Prioritization</Badge>
+                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Roadmap & Strategy</Badge>
+                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Adoption & Retention Growth</Badge>
+                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Pricing & Packaging</Badge>
+                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">GTM Planning</Badge>
+                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Feature Prioritization</Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-gray-900">Customer-Centric</CardTitle>
+            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-teal-100 hover:border-teal-300 bg-gradient-to-br from-white to-teal-50/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardHeader className="relative z-10">
+                <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-teal-700 transition-colors duration-300">
+                  Customer-Centric
+                </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Customer Discovery</Badge>
-                  <Badge variant="secondary">Voice of Customer</Badge>
-                  <Badge variant="secondary">Competitive Analysis</Badge>
-                  <Badge variant="secondary">Stakeholder Enablement</Badge>
+                  <Badge variant="secondary" className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Customer Discovery</Badge>
+                  <Badge variant="secondary" className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Voice of Customer</Badge>
+                  <Badge variant="secondary" className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Competitive Analysis</Badge>
+                  <Badge variant="secondary" className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Stakeholder Enablement</Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-gray-900">Technical & Data</CardTitle>
+            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-cyan-100 hover:border-cyan-300 bg-gradient-to-br from-white to-cyan-50/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <CardHeader className="relative z-10">
+                <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-cyan-700 transition-colors duration-300">
+                  Technical & Data
+                </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">SQL</Badge>
-                  <Badge variant="secondary">REST APIs & Webhooks</Badge>
-                  <Badge variant="secondary">Postman</Badge>
-                  <Badge variant="secondary">Grafana</Badge>
-                  <Badge variant="secondary">A/B Testing</Badge>
-                  <Badge variant="secondary">Conversion Analytics</Badge>
+                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">SQL</Badge>
+                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">REST APIs & Webhooks</Badge>
+                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">Postman</Badge>
+                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">Grafana</Badge>
+                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">A/B Testing</Badge>
+                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">Conversion Analytics</Badge>
                 </div>
               </CardContent>
             </Card>
