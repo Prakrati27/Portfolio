@@ -466,7 +466,7 @@ const Portfolio = () => {
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm">
                       <h5 className="font-semibold text-gray-800 mb-2">⚙️ Conditions Builder</h5>
-                      <p className="text-gray-600 text-sm italic">Dynamic conditions (e.g., experience >2 years) → streamlines shortlisting.</p>
+                      <p className="text-gray-600 text-sm italic">Dynamic conditions (e.g., experience greater than 2 years) streamlines shortlisting.</p>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm">
                       <h5 className="font-semibold text-gray-800 mb-2">🎯 Action Triggers</h5>
