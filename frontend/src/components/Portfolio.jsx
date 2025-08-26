@@ -666,7 +666,6 @@ const Portfolio = () => {
                   <CardTitle className="text-3xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                     4. Bell Curve Calibration System
                   </CardTitle>
-                  <ExternalLink className="w-6 h-6 text-gray-400 group-hover:text-teal-600 transition-colors" />
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -713,15 +712,6 @@ const Portfolio = () => {
                   <p className="text-gray-700 text-lg">
                     Balances <strong className="text-teal-600">policy configurability + UX clarity</strong> in a sensitive HR domain — influencing both culture and analytics.
                   </p>
-                </div>
-
-                {/* Key Feature */}
-                <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-lg">
-                  <h4 className="text-xl font-bold text-gray-800 mb-4">Calibration Intelligence</h4>
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <h5 className="font-semibold text-gray-800 mb-2">📊 Performance Distribution Dashboard</h5>
-                    <p className="text-gray-600 text-sm italic">Expected vs. actual performance distribution enabling fairer calibration decisions.</p>
-                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
