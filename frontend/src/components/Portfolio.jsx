@@ -916,7 +916,11 @@ const Portfolio = () => {
             >
               LinkedIn
             </Button>
-            <Button variant="ghost" size="sm">
+            <Button 
+              variant="ghost" 
+              size="sm"
+              onClick={() => window.open('https://customer-assets.emergentagent.com/job_mvp-builder-7/artifacts/azzlbcs1_Prakrati%20Chaudhary_Deepwatch%20Resume.pdf', '_blank')}
+            >
               Resume Download
             </Button>
             <Button 
