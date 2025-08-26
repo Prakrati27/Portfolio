@@ -582,9 +582,11 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto text-center text-gray-600">
-          <p>&copy; 2024 Product Manager Portfolio. Crafted with passion for great products.</p>
+      <footer className="py-12 px-6 border-t border-emerald-200 bg-gradient-to-r from-slate-50 to-emerald-50">
+        <div className="max-w-6xl mx-auto text-center text-slate-600">
+          <p className="hover:text-emerald-600 transition-colors duration-300">
+            &copy; 2024 Product Manager Portfolio. Crafted with passion for great products.
+          </p>
         </div>
       </footer>
 
@@ -592,9 +594,9 @@ const Portfolio = () => {
       {showScrollTop && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 bg-gray-900 hover:bg-gray-800 text-white rounded-full p-3 hover:scale-110 transition-all duration-200 shadow-lg"
+          className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-full p-3 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-emerald-200 group"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform duration-200" />
         </Button>
       )}
 
