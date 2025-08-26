@@ -546,7 +546,7 @@ const Portfolio = () => {
                   <h4 className="text-xl font-bold text-gray-800 mb-4">Key Integration Achievement</h4>
                   <div className="bg-white p-4 rounded-lg shadow-sm">
                     <h5 className="font-semibold text-gray-800 mb-2">🎓 Unified Learning Catalog</h5>
-                    <p className="text-gray-600 text-sm italic">Udemy & LinkedIn Learning courses inside the LMS catalog → richer discovery and new adoption hooks.</p>
+                    <p className="text-gray-600 text-sm italic">Udemy & LinkedIn Learning courses inside the LMS catalog for richer discovery and new adoption hooks.</p>
                   </div>
                 </div>
 
