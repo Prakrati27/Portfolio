@@ -348,8 +348,8 @@ const Portfolio = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• Scoped and delivered <strong>customizable SaaS features for performance & IDPs</strong> → +5% retention across 3,000+ employees</li>
-                  <li>• Conducted <strong>competitive analysis + client workshops</strong> → informed roadmap and GTM positioning</li>
+                  <li>• Scoped and delivered <strong>customizable SaaS features for performance & IDPs</strong> +5% retention across 3,000+ employees</li>
+                  <li>• Conducted <strong>competitive analysis + client workshops</strong> informed roadmap and GTM positioning</li>
                 </ul>
               </CardContent>
             </Card>
