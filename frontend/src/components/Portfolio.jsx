@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Phone, MapPin, ExternalLink, Github, Linkedin, ArrowUp, Loader2 } from 'lucide-react';
+import { ChevronDown, Mail, MapPin, ExternalLink, Linkedin, ArrowUp, Loader2, Download, Users, Building, TrendingUp, Rocket } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
@@ -18,7 +18,8 @@ const Portfolio = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    service: 'consulting'
   });
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const Portfolio = () => {
           title: "Message sent successfully!",
           description: response.data.message,
         });
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '', service: 'consulting' });
       }
     } catch (error) {
       console.error('Contact form error:', error);
@@ -71,46 +72,46 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/70 backdrop-blur-xl border-b border-slate-700/50 shadow-2xl shadow-slate-900/50">
-        <div className="max-w-6xl mx-auto px-6 py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Portfolio
-            </div>
+            <div className="text-xl font-bold text-gray-900">Prakrati Chaudhary</div>
             <div className="hidden md:flex space-x-8">
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-slate-300 hover:text-blue-400 transition-all duration-300 hover:-translate-y-0.5 transform relative group"
+                className="text-gray-600 hover:text-teal-600 transition-colors duration-200 hover:-translate-y-0.5 transform"
               >
                 About
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('skills')}
-                className="text-slate-300 hover:text-blue-400 transition-all duration-300 hover:-translate-y-0.5 transform relative group"
+                className="text-gray-600 hover:text-teal-600 transition-colors duration-200 hover:-translate-y-0.5 transform"
               >
                 Skills
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('experience')}
-                className="text-slate-300 hover:text-blue-400 transition-all duration-300 hover:-translate-y-0.5 transform relative group"
+                className="text-gray-600 hover:text-teal-600 transition-colors duration-200 hover:-translate-y-0.5 transform"
               >
                 Experience
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="text-slate-300 hover:text-blue-400 transition-all duration-300 hover:-translate-y-0.5 transform relative group"
+                className="text-gray-600 hover:text-teal-600 transition-colors duration-200 hover:-translate-y-0.5 transform"
               >
                 Projects
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+              </button>
+              <button 
+                onClick={() => scrollToSection('testimonials')}
+                className="text-gray-600 hover:text-teal-600 transition-colors duration-200 hover:-translate-y-0.5 transform"
+              >
+                Testimonials
               </button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-blue-600/80 to-purple-600/80 backdrop-blur-md hover:from-blue-700/90 hover:to-purple-700/90 text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 border border-white/10"
+                className="bg-teal-600 hover:bg-teal-700 text-white hover:scale-105 transition-all duration-200"
               >
                 Contact
               </Button>
@@ -120,156 +121,169 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 pt-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-br from-purple-500/10 to-blue-500/10 blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-8 relative group cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full animate-pulse group-hover:scale-110 transition-transform duration-500"></div>
-              <div className="absolute inset-1 rounded-full overflow-hidden group-hover:scale-105 transition-transform duration-300">
+      <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="mb-12">
+            <div className="w-32 h-32 mx-auto mb-8 relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full group-hover:scale-110 transition-transform duration-500 shadow-lg shadow-teal-200"></div>
+              <div className="absolute inset-1 rounded-full overflow-hidden">
                 <img 
                   src="https://customer-assets.emergentagent.com/job_mvp-builder-7/artifacts/mffcfezq_689d5dfa351ec49d8df646d2-HeadshotPro.png" 
-                  alt="Prakrati Chaudhary - Product Manager"
+                  alt="Prakrati Chaudhary - Senior Product Manager"
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Rotating ring animation */}
-              <div className="absolute inset-0 border-2 border-blue-400/30 rounded-full animate-spin opacity-60"></div>
-              <div className="absolute inset-4 border border-purple-400/40 rounded-full animate-ping opacity-40"></div>
             </div>
           </div>
-          <h1 className="text-6xl md:text-8xl font-light text-white mb-6 tracking-tight">
-            <span className="inline-block hover:scale-105 transition-transform duration-300 cursor-default">Prakrati</span>{' '}
-            <span className="inline-block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-default">Chaudhary</span>
+          
+          <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+            Prakrati Chaudhary
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 font-light leading-relaxed">
-            <span className="inline-block hover:text-blue-400 transition-colors duration-300">Product Manager | 6+ years building SaaS products from 0→1</span><br />
-            <span className="text-slate-400 hover:text-purple-400 transition-colors duration-300">Specializing in MVP development & rapid go-to-market execution</span>
+          
+          <h2 className="text-2xl md:text-3xl text-gray-600 mb-8 font-light">
+            Senior Product Manager — SaaS & AI Innovation
+          </h2>
+          
+          <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Product leader with 6+ years building 0→1 and scaled SaaS platforms for <strong className="text-teal-600">50K+ users across 100+ global enterprises</strong>. Driving adoption, retention, and engagement with <strong className="text-teal-600">AI-driven innovation</strong> and customer-first product design.
           </p>
+
+          {/* Impact Tiles */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center justify-center mb-2">
+                <Rocket className="w-6 h-6 text-teal-600" />
+              </div>
+              <div className="text-2xl font-bold text-gray-900">3+</div>
+              <div className="text-sm text-gray-600">0→1 launches</div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center justify-center mb-2">
+                <Users className="w-6 h-6 text-teal-600" />
+              </div>
+              <div className="text-2xl font-bold text-gray-900">50K+</div>
+              <div className="text-sm text-gray-600">users impacted</div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center justify-center mb-2">
+                <Building className="w-6 h-6 text-teal-600" />
+              </div>
+              <div className="text-2xl font-bold text-gray-900">100+</div>
+              <div className="text-sm text-gray-600">enterprise customers</div>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-center justify-center mb-2">
+                <TrendingUp className="w-6 h-6 text-teal-600" />
+              </div>
+              <div className="text-lg font-bold text-gray-900">+15-25%</div>
+              <div className="text-sm text-gray-600">growth metrics</div>
+            </div>
+          </div>
+
+          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               onClick={() => scrollToSection('projects')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 group"
+              className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 hover:scale-105 transition-all duration-200"
             >
-              <span className="group-hover:translate-x-1 transition-transform duration-200">View Projects</span>
+              View Flagship Projects
+            </Button>
+            <Button 
+              variant="outline" 
+              className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 hover:scale-105 transition-all duration-200"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              Download Resume
             </Button>
             <Button 
               onClick={() => scrollToSection('contact')}
               variant="outline" 
-              className="border-slate-500 text-slate-300 hover:bg-slate-800 hover:border-blue-400 hover:text-blue-400 px-8 py-3 hover:scale-105 transition-all duration-300 group"
+              className="border-teal-300 text-teal-700 hover:bg-teal-50 px-8 py-3 hover:scale-105 transition-all duration-200"
             >
-              <span className="group-hover:translate-x-1 transition-transform duration-200">Get In Touch</span>
+              Get In Touch
             </Button>
           </div>
+
           <div className="mt-16 animate-bounce">
-            <ChevronDown className="w-6 h-6 text-blue-400 mx-auto cursor-pointer hover:text-purple-400 transition-colors duration-300 hover:scale-110" onClick={() => scrollToSection('about')} />
+            <ChevronDown className="w-6 h-6 text-gray-400 mx-auto cursor-pointer hover:text-teal-600 transition-colors duration-300" onClick={() => scrollToSection('about')} />
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-          <div className="absolute top-32 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce"></div>
-        </div>
-        <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-5xl font-light text-white mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">About Me</span>
-          </h2>
-          <div className="prose prose-lg mx-auto text-slate-300 leading-relaxed">
-            <div className="bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border border-slate-700/50 hover:border-blue-500/30 group relative overflow-hidden">
-              {/* Glass morphism overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                <p className="text-xl mb-6 group-hover:text-slate-200 transition-colors duration-300">
-                  I'm a Product Manager with 6+ years of experience in SaaS, passionate about transforming ideas into products that users love. I specialize in <strong className="text-blue-400">0→1 product launches</strong>, MVP development, and rapid go-to-market execution.
-                </p>
-                <p className="text-lg mb-6 group-hover:text-slate-200 transition-colors duration-300">
-                  My journey has been defined by collaborating with entrepreneurs, designers, and developers to translate vision into functional products. I'm skilled in Agile methodologies, stakeholder alignment, and data-driven decision-making, with a proven record of improving adoption and retention by <strong className="text-purple-400">15–25%</strong>.
-                </p>
-                <p className="text-lg group-hover:text-slate-200 transition-colors duration-300">
-                  What drives me most is the intersection of customer needs, technical feasibility, and business value. I believe great products come from deep customer understanding, rigorous experimentation, and seamless cross-functional collaboration.
-                </p>
-              </div>
-            </div>
+      <section id="about" className="py-24 px-6 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">About Me</h2>
+          <div className="prose prose-lg mx-auto text-gray-700 leading-relaxed space-y-6">
+            <p className="text-xl">
+              I am a <strong className="text-teal-600">Product Manager and AI generalist</strong> with 6+ years of experience building and scaling SaaS platforms across HRTech, learning ecosystems, and enterprise workforce planning.
+            </p>
+            
+            <p>
+              At <strong>peopleHum</strong> and <strong>Engagedly</strong>, I launched AI recruiter assistants, workforce planning modules, and LMS integrations — products that scaled across 50K+ users and 100+ enterprise clients, consistently driving adoption (+20%), engagement (+25%), and completion (+15%).
+            </p>
+            
+            <p>
+              I stay hands-on with <strong className="text-teal-600">AI & emerging tools</strong> — building workflows in <strong>n8n</strong>, experimenting with <strong>Claude, Higgsfield, Coder, and Emergent</strong> — to translate cutting-edge AI capabilities into usable product experiences.
+            </p>
+            
+            <p>
+              My foundation was built at <strong>Byju's</strong> (customer empathy through 100+ customer calls with sales/product teams) and <strong>enParadigm</strong> (consulting Fortune 500s like Google & ABG with behavioral + business simulations). This gave me a rare blend of <strong className="text-teal-600">customer obsession, enterprise credibility, and SaaS scale execution</strong>.
+            </p>
+            
+            <p>
+              Recognized with <strong>leadership impact awards</strong>, I thrive at the intersection of <strong>customer needs, technical feasibility, and business strategy</strong> — where great products are born.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-6 bg-slate-900 relative">
+      <section id="skills" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-light text-white mb-16 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Skills & Expertise</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700/50 hover:border-blue-500/50 bg-slate-800/20 backdrop-blur-xl relative overflow-hidden">
-              {/* Glass morphism effects */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 backdrop-blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
-              <CardHeader className="relative z-10">
-                <CardTitle className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                  Product Management
-                </CardTitle>
+          <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">Skills & Expertise</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold text-gray-900">Product Leadership</CardTitle>
               </CardHeader>
-              <CardContent className="relative z-10">
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Roadmap & Strategy</Badge>
-                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Adoption & Retention Growth</Badge>
-                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Pricing & Packaging</Badge>
-                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">GTM Planning</Badge>
-                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Feature Prioritization</Badge>
-                </div>
+              <CardContent>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Lifecycle Management · Product Strategy · Roadmap Prioritization · Data-Driven Decision-Making
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700/50 hover:border-purple-500/50 bg-slate-800/20 backdrop-blur-xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 backdrop-blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
-              <CardHeader className="relative z-10">
-                <CardTitle className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
-                  Customer-Centric
-                </CardTitle>
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold text-gray-900">AI & Emerging Tech</CardTitle>
               </CardHeader>
-              <CardContent className="relative z-10">
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Customer Discovery</Badge>
-                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Voice of Customer</Badge>
-                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Competitive Analysis</Badge>
-                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Stakeholder Enablement</Badge>
-                </div>
+              <CardContent>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  AI Workflow Automation (n8n) · Generative AI platforms (Claude, Higgsfield, Coder, Emergent) · Semantic Search · AI Governance
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700/50 hover:border-indigo-500/50 bg-slate-800/20 backdrop-blur-xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 backdrop-blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
-              <CardHeader className="relative z-10">
-                <CardTitle className="text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors duration-300">
-                  Technical & Data
-                </CardTitle>
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold text-gray-900">Collaboration & Discovery</CardTitle>
               </CardHeader>
-              <CardContent className="relative z-10">
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">SQL</Badge>
-                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">REST APIs & Webhooks</Badge>
-                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">Postman</Badge>
-                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">Grafana</Badge>
-                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">A/B Testing</Badge>
-                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">Conversion Analytics</Badge>
-                </div>
+              <CardContent>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Cross-Functional Leadership · Customer Discovery · GTM Planning · Stakeholder Management
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
+                <CardTitle className="text-lg font-semibold text-gray-900">Technical Proficiency</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  APIs & Webhooks · SQL · Scoring Engines · Jira · Grafana · Metabase · Postman
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -277,362 +291,107 @@ const Portfolio = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative">
+      <section id="experience" className="py-24 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-light text-white mb-16 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Experience</span>
-          </h2>
+          <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">Experience</h2>
           
-          <Card className="mb-8 group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-1 border-slate-700/50 bg-slate-800/30 backdrop-blur-xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-            <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
-            <CardHeader className="relative z-10">
-              <div className="flex justify-between items-start">
-                <div>
-                  <CardTitle className="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                    Product Manager
-                  </CardTitle>
-                  <CardDescription className="text-lg text-slate-400 mt-1 group-hover:text-purple-400 transition-colors duration-300">
-                    peopleHum (Avniro Group)
-                  </CardDescription>
-                </div>
-                <Badge variant="outline" className="text-sm border-blue-500/30 text-blue-400 group-hover:bg-blue-500/10 transition-colors duration-300">
-                  6+ Years
-                </Badge>
-              </div>
-            </CardHeader>
-            <CardContent className="relative z-10">
-              <div className="space-y-4 text-slate-300 leading-relaxed">
-                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-4 rounded-lg border-l-4 border-blue-500 group-hover:shadow-md transition-shadow duration-300">
-                  <p className="group-hover:text-slate-200 transition-colors duration-300">
-                    <strong className="text-blue-400">Impact:</strong> Increased onboarding conversion by <strong className="text-blue-300">15%</strong> and customer retention by <strong className="text-purple-300">25%</strong> through data-driven product improvements.
-                  </p>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-6 mt-6">
-                  <div className="bg-slate-800/70 p-4 rounded-lg hover:bg-slate-700/70 transition-colors duration-300">
-                    <h4 className="font-semibold text-white mb-3 text-blue-400">Key Achievements:</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="hover:text-slate-200 transition-colors duration-200">• Analyzed funnel drop-offs using SQL and Grafana to inform product roadmap</li>
-                      <li className="hover:text-slate-200 transition-colors duration-200">• Drove strategic integrations to expand ecosystem capabilities</li>
-                      <li className="hover:text-slate-200 transition-colors duration-200">• Owned high-impact feature launches (bell-curve calibration, AI-powered automation)</li>
-                      <li className="hover:text-slate-200 transition-colors duration-200">• Built AI-powered recruiter assistant from concept to MVP in 12 weeks</li>
-                    </ul>
+          <div className="space-y-8">
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle className="text-xl font-semibold text-gray-900">Senior Product Manager</CardTitle>
+                    <CardDescription className="text-lg text-gray-600 mt-1">peopleHum (Avniro Group)</CardDescription>
                   </div>
-                  
-                  <div className="bg-slate-800/70 p-4 rounded-lg hover:bg-slate-700/70 transition-colors duration-300">
-                    <h4 className="font-semibold text-white mb-3 text-purple-400">Collaboration & Leadership:</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="hover:text-slate-200 transition-colors duration-200">• Mentored junior PMs and collaborated with UX & Engineering</li>
-                      <li className="hover:text-slate-200 transition-colors duration-200">• Partnered with Marketing & Content teams on learning integrations</li>
-                      <li className="hover:text-slate-200 transition-colors duration-200">• Supported enterprise deal cycles with product demos</li>
-                      <li className="hover:text-slate-200 transition-colors duration-200">• Received spot award for leadership impact</li>
-                    </ul>
+                  <Badge variant="outline" className="text-sm">Jan 2024 – Present</Badge>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Launched <strong className="text-teal-600">AI recruiter assistant</strong> → boosted recruiter efficiency by 25%, scaled to 10K+ users</li>
+                  <li>• Shipped <strong className="text-teal-600">Udemy/LinkedIn Learning integrations</strong> → +15% completion, +20% adoption, +25% engagement</li>
+                  <li>• Built <strong>notification preferences & approval workflow framework</strong> → reduced noise, improved governance</li>
+                  <li>• Recognized with <strong>spot awards</strong> for leadership impact</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle className="text-xl font-semibold text-gray-900">Product Manager</CardTitle>
+                    <CardDescription className="text-lg text-gray-600 mt-1">peopleHum (Avniro Group)</CardDescription>
                   </div>
+                  <Badge variant="outline" className="text-sm">Jan 2022 – Jan 2024</Badge>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-24 px-6 bg-slate-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-light text-white mb-16 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Featured Projects</span>
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            
-            <Card className="group hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60"></div>
-              <CardHeader className="relative z-10">
-                <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                    AI-Powered Hire Automation
-                  </CardTitle>
-                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-400 transition-all duration-300 group-hover:scale-110" />
-                </div>
-                <CardDescription className="text-slate-400 group-hover:text-purple-400 transition-colors duration-300">
-                  Intelligent recruitment pipeline automation
-                </CardDescription>
               </CardHeader>
-              <CardContent className="relative z-10">
-                <p className="text-slate-300 mb-4 group-hover:text-slate-200 transition-colors duration-300">
-                  Built an AI-powered recruiter assistant from concept to MVP in under 12 weeks, integrating GPT-4-powered candidate screening and semantic search.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">AI/ML</Badge>
-                  <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">GPT-4</Badge>
-                  <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">API Integration</Badge>
-                  <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">MVP Development</Badge>
-                </div>
-                <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-3 rounded-lg text-sm border-l-4 border-blue-500 group-hover:shadow-md transition-shadow duration-300">
-                  <strong className="text-blue-400">Impact:</strong> <span className="text-blue-300">25% efficiency gain, scaled to 10K+ users</span>
-                </div>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Drove <strong>bell curve calibration & succession planning</strong> → fairer performance reviews, transparent decisions</li>
+                  <li>• Conducted <strong>market feasibility & GTM research</strong> → scaled adoption across 100+ enterprise clients</li>
+                  <li>• Integrated <strong className="text-teal-600">GPT-4 candidate screening</strong> → improved recruiter productivity & semantic search accuracy</li>
+                </ul>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="absolute top-4 right-4 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
-              <CardHeader className="relative z-10">
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
-                    Bell Curve Calibration System
-                  </CardTitle>
-                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-purple-400 transition-all duration-300 group-hover:scale-110" />
+                  <div>
+                    <CardTitle className="text-xl font-semibold text-gray-900">Product Consultant</CardTitle>
+                    <CardDescription className="text-lg text-gray-600 mt-1">Engagedly</CardDescription>
+                  </div>
+                  <Badge variant="outline" className="text-sm">Jun 2021 – Jan 2022</Badge>
                 </div>
-                <CardDescription className="text-slate-400 group-hover:text-blue-400 transition-colors duration-300">
-                  Performance management enhancement
-                </CardDescription>
               </CardHeader>
-              <CardContent className="relative z-10">
-                <p className="text-slate-300 mb-4 group-hover:text-slate-200 transition-colors duration-300">
-                  Designed and launched bell-curve calibration feature for performance cycles, improving data completeness and downstream analytics capabilities.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Performance Management</Badge>
-                  <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Data Analytics</Badge>
-                  <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Enterprise SaaS</Badge>
-                </div>
-                <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 p-3 rounded-lg text-sm border-l-4 border-green-500 group-hover:shadow-md transition-shadow duration-300">
-                  <strong className="text-green-400">Impact:</strong> <span className="text-green-300">20-30% improvement in HR productivity</span>
-                </div>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Scoped and delivered <strong>customizable SaaS features for performance & IDPs</strong> → +5% retention across 3,000+ employees</li>
+                  <li>• Conducted <strong>competitive analysis + client workshops</strong> → informed roadmap and GTM positioning</li>
+                </ul>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="absolute top-4 right-4 w-2 h-2 bg-indigo-400 rounded-full animate-pulse opacity-60"></div>
-              <CardHeader className="relative z-10">
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors duration-300">
-                    Learning Platform Integration
-                  </CardTitle>
-                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-all duration-300 group-hover:scale-110" />
+                  <div>
+                    <CardTitle className="text-xl font-semibold text-gray-900">Solutions Manager</CardTitle>
+                    <CardDescription className="text-lg text-gray-600 mt-1">enParadigm</CardDescription>
+                  </div>
+                  <Badge variant="outline" className="text-sm">Jan 2017 – Mar 2021</Badge>
                 </div>
-                <CardDescription className="text-slate-400 group-hover:text-purple-400 transition-colors duration-300">
-                  Udemy & LinkedIn Learning integration
-                </CardDescription>
               </CardHeader>
-              <CardContent className="relative z-10">
-                <p className="text-slate-300 mb-4 group-hover:text-slate-200 transition-colors duration-300">
-                  Partnered with Marketing & Content teams to launch learning integrations, creating new acquisition hooks and improving user engagement.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">API Integration</Badge>
-                  <Badge className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">Third-party Integration</Badge>
-                  <Badge className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">GTM Strategy</Badge>
-                </div>
-                <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-3 rounded-lg text-sm border-l-4 border-purple-500 group-hover:shadow-md transition-shadow duration-300">
-                  <strong className="text-purple-400">Impact:</strong> <span className="text-purple-300">25% boost in engagement, new acquisition channels</span>
-                </div>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Designed <strong>business & behavioral simulation platforms</strong> for sales/leadership enablement</li>
+                  <li>• Partnered with <strong className="text-teal-600">Google, Aditya Birla Group, Airtel, UltraTech, Hero Fin</strong> on enterprise simulation rollouts</li>
+                  <li>• Closed <strong>$20–30M in Fortune 500 deals</strong>, delivering measurable client impact</li>
+                </ul>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60"></div>
-              <CardHeader className="relative z-10">
+            <Card className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+              <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                    Workforce Planning Module
-                  </CardTitle>
-                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-blue-400 transition-all duration-300 group-hover:scale-110" />
+                  <div>
+                    <CardTitle className="text-xl font-semibold text-gray-900">Business Consultant</CardTitle>
+                    <CardDescription className="text-lg text-gray-600 mt-1">Byju's</CardDescription>
+                  </div>
+                  <Badge variant="outline" className="text-sm">Jan 2016 – Jan 2017</Badge>
                 </div>
-                <CardDescription className="text-slate-400 group-hover:text-indigo-400 transition-colors duration-300">
-                  Enterprise manpower planning solution
-                </CardDescription>
               </CardHeader>
-              <CardContent className="relative z-10">
-                <p className="text-slate-300 mb-4 group-hover:text-slate-200 transition-colors duration-300">
-                  Conducted market feasibility studies and delivered customizable enterprise features for performance planning and individual development plans (IDPs).
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Enterprise SaaS</Badge>
-                  <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Market Research</Badge>
-                  <Badge className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Workforce Analytics</Badge>
-                </div>
-                <div className="bg-gradient-to-r from-orange-500/10 to-amber-500/10 p-3 rounded-lg text-sm border-l-4 border-orange-500 group-hover:shadow-md transition-shadow duration-300">
-                  <strong className="text-orange-400">Impact:</strong> <span className="text-orange-300">Scaled across 100+ enterprise clients (50K+ users)</span>
-                </div>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Partnered with sales + product teams; joined <strong>100+ customer calls</strong> to refine product demos & positioning</li>
+                  <li>• Built strong foundation in <strong className="text-teal-600">customer empathy & storytelling</strong></li>
+                </ul>
               </CardContent>
             </Card>
-
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full bg-gradient-to-br from-purple-500/10 to-indigo-500/10 blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-5xl font-light text-white mb-16 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Let's Connect</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border-slate-700/50 bg-slate-800/30 backdrop-blur-xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 backdrop-blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
-              <CardHeader className="relative z-10">
-                <CardTitle className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                  Send a Message
-                </CardTitle>
-                <CardDescription className="text-slate-400 group-hover:text-purple-400 transition-colors duration-300">
-                  I'd love to hear about your next project
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="relative z-10">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 hover:border-slate-500 transition-colors duration-200"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 hover:border-slate-500 transition-colors duration-200"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full min-h-32 bg-slate-800/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500/20 hover:border-slate-500 transition-colors duration-200"
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg hover:shadow-blue-500/25 group/btn"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      <span className="group-hover/btn:translate-x-1 transition-transform duration-200">Send Message</span>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <Card className="group hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 border-slate-700/50 bg-slate-800/30 backdrop-blur-xl relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 backdrop-blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
-                <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
-                    Contact Information
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 relative z-10">
-                  <div className="flex items-center space-x-3 text-slate-300 group-hover:text-slate-200 transition-colors duration-300 hover:translate-x-1">
-                    <Mail className="w-5 h-5 text-blue-400" />
-                    <span>cprakrati27@gmail.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-slate-300 group-hover:text-slate-200 transition-colors duration-300 hover:translate-x-1">
-                    <MapPin className="w-5 h-5 text-indigo-400" />
-                    <span>Bangalore, Karnataka, India</span>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 border-slate-700/50 bg-slate-800/30 backdrop-blur-xl relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 backdrop-blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
-                <CardHeader className="relative z-10">
-                  <CardTitle className="text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors duration-300">
-                    Professional Links
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  <div className="flex space-x-4">
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="hover:scale-105 transition-all duration-300 border-blue-500/30 text-blue-400 hover:bg-blue-500/10 hover:border-blue-400 group/social"
-                      onClick={() => window.open('https://www.linkedin.com/in/prakratichaudhary/', '_blank')}
-                    >
-                      <Linkedin className="w-4 h-4 mr-2 group-hover/social:scale-110 transition-transform duration-200" />
-                      <span className="group-hover/social:translate-x-0.5 transition-transform duration-200">LinkedIn</span>
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="hover:scale-105 transition-all duration-300 border-purple-500/30 text-purple-400 hover:bg-purple-500/10 hover:border-purple-400 group/social"
-                      onClick={() => window.open('https://github.com/Prakrati27', '_blank')}
-                    >
-                      <Github className="w-4 h-4 mr-2 group-hover/social:scale-110 transition-transform duration-200" />
-                      <span className="group-hover/social:translate-x-0.5 transition-transform duration-200">GitHub</span>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-xl p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700/50 hover:border-white/20">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-xl"></div>
-                <div className="relative z-10">
-                  <h3 className="font-semibold text-white mb-2 text-blue-400">Ready to collaborate?</h3>
-                  <p className="text-slate-300 text-sm">
-                    I'm always interested in discussing new opportunities, innovative projects, and potential collaborations. Let's build something amazing together!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-12 px-6 border-t border-slate-700 bg-gradient-to-r from-slate-900 to-slate-800">
-        <div className="max-w-6xl mx-auto text-center text-slate-400">
-          <p className="hover:text-blue-400 transition-colors duration-300">
-            &copy; 2024 Prakrati Chaudhary Portfolio. Crafted with passion for great products.
-          </p>
-        </div>
-      </footer>
-
-      {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <Button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full p-3 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 group"
-        >
-          <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform duration-200" />
-        </Button>
-      )}
 
       <Toaster />
     </div>
