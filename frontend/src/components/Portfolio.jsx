@@ -424,7 +424,7 @@ const Portfolio = () => {
                   <h4 className="text-xl font-bold text-blue-800 mb-3">Action</h4>
                   <ul className="text-blue-700 text-lg space-y-2">
                     <li>• Built an <strong>AI recruiter assistant</strong> powered by GPT-4, semantic search, and automation workflows</li>
-                    <li>• Designed an <strong>event → condition → action</strong> automation builder for recruiters to configure their own flows</li>
+                    <li>• Designed an <strong>event to condition to action</strong> automation builder for recruiters to configure their own flows</li>
                     <li>• Delivered MVP in <strong>12 weeks</strong> with engineering + design teams under high ambiguity</li>
                   </ul>
                 </div>
