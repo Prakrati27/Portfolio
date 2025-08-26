@@ -696,7 +696,7 @@ const Portfolio = () => {
                   <h4 className="text-xl font-bold text-gray-800 mb-4">Calibration Intelligence</h4>
                   <div className="bg-white p-4 rounded-lg shadow-sm">
                     <h5 className="font-semibold text-gray-800 mb-2">📊 Performance Distribution Dashboard</h5>
-                    <p className="text-gray-600 text-sm italic">Expected vs. actual performance distribution → enabling fairer calibration decisions.</p>
+                    <p className="text-gray-600 text-sm italic">Expected vs. actual performance distribution enabling fairer calibration decisions.</p>
                   </div>
                 </div>
 
