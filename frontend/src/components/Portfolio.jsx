@@ -587,7 +587,6 @@ const Portfolio = () => {
                   <CardTitle className="text-3xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                     3. Workforce Planning Module (MPP)
                   </CardTitle>
-                  <ExternalLink className="w-6 h-6 text-gray-400 group-hover:text-teal-600 transition-colors" />
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -636,12 +635,17 @@ const Portfolio = () => {
                   </p>
                 </div>
 
-                {/* Key Feature */}
+                {/* Product Screenshot */}
                 <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-lg">
-                  <h4 className="text-xl font-bold text-gray-800 mb-4">Strategic Planning Dashboard</h4>
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Workforce Planning Dashboard</h4>
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <h5 className="font-semibold text-gray-800 mb-2">📊 Budget & Headcount Control</h5>
-                    <p className="text-gray-600 text-sm italic">Headcount + budget allocation vs usage enabling proactive workforce planning and approvals.</p>
+                    <h5 className="font-semibold text-gray-800 mb-3">📊 Strategic Planning Interface</h5>
+                    <img 
+                      src="https://customer-assets.emergentagent.com/job_mvp-builder-7/artifacts/fydxzxqm_Screenshot%202025-08-26%20at%202.11.58%E2%80%AFPM.png" 
+                      alt="Workforce planning dashboard with headcount and budget controls"
+                      className="w-full rounded-lg border border-gray-200 shadow-sm"
+                    />
+                    <p className="text-gray-600 text-sm mt-2 italic">Enterprise workforce planning interface with headcount tracking, budget allocation controls, and proactive hiring pipeline management</p>
                   </div>
                 </div>
 
