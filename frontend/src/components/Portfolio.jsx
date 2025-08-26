@@ -233,8 +233,10 @@ const Portfolio = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700 hover:border-purple-500/50 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+            <Card className="group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700/50 hover:border-purple-500/50 bg-slate-800/20 backdrop-blur-xl relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 backdrop-blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
               <CardHeader className="relative z-10">
                 <CardTitle className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
                   Customer-Centric
