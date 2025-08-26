@@ -621,7 +621,7 @@ const Portfolio = () => {
                   <h4 className="text-xl font-bold text-gray-800 mb-4">Strategic Planning Dashboard</h4>
                   <div className="bg-white p-4 rounded-lg shadow-sm">
                     <h5 className="font-semibold text-gray-800 mb-2">📊 Budget & Headcount Control</h5>
-                    <p className="text-gray-600 text-sm italic">Headcount + budget allocation vs usage → enabling proactive workforce planning and approvals.</p>
+                    <p className="text-gray-600 text-sm italic">Headcount + budget allocation vs usage enabling proactive workforce planning and approvals.</p>
                   </div>
                 </div>
 
