@@ -329,9 +329,9 @@ const Portfolio = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• Drove <strong>bell curve calibration & succession planning</strong> → fairer performance reviews, transparent decisions</li>
-                  <li>• Conducted <strong>market feasibility & GTM research</strong> → scaled adoption across 100+ enterprise clients</li>
-                  <li>• Integrated <strong className="text-teal-600">GPT-4 candidate screening</strong> → improved recruiter productivity & semantic search accuracy</li>
+                  <li>• Drove <strong>bell curve calibration & succession planning</strong> fairer performance reviews, transparent decisions</li>
+                  <li>• Conducted <strong>market feasibility & GTM research</strong> scaled adoption across 100+ enterprise clients</li>
+                  <li>• Integrated <strong className="text-teal-600">GPT-4 candidate screening</strong> improved recruiter productivity & semantic search accuracy</li>
                 </ul>
               </CardContent>
             </Card>
