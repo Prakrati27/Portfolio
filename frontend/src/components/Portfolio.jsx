@@ -414,9 +414,17 @@ const Portfolio = () => {
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-gray-900 hover:bg-gray-800 text-white hover:scale-105 transition-all duration-200"
+                    disabled={isSubmitting}
+                    className="w-full bg-gray-900 hover:bg-gray-800 text-white hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    Send Message
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Message'
+                    )}
                   </Button>
                 </form>
               </CardContent>
