@@ -37,14 +37,30 @@ const Portfolio = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock form submission
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
+      
+      if (response.data.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: response.data.message,
+        });
+        setFormData({ name: '', email: '', message: '' });
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later or contact me directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e) => {
