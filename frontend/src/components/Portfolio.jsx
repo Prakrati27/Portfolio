@@ -73,7 +73,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-slate-900">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700 shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/70 backdrop-blur-xl border-b border-slate-700/50 shadow-2xl shadow-slate-900/50">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -110,7 +110,7 @@ const Portfolio = () => {
               </button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+                className="bg-gradient-to-r from-blue-600/80 to-purple-600/80 backdrop-blur-md hover:from-blue-700/90 hover:to-purple-700/90 text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 border border-white/10"
               >
                 Contact
               </Button>
