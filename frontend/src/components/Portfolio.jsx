@@ -169,19 +169,24 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-light text-gray-900 mb-12 text-center">About Me</h2>
-          <div className="prose prose-lg mx-auto text-gray-600 leading-relaxed">
-            <p className="text-xl mb-6">
-              I'm a Product Manager with 6+ years of experience in SaaS, passionate about transforming ideas into products that users love. I specialize in <strong>0→1 product launches</strong>, MVP development, and rapid go-to-market execution.
-            </p>
-            <p className="text-lg mb-6">
-              My journey has been defined by collaborating with entrepreneurs, designers, and developers to translate vision into functional products. I'm skilled in Agile methodologies, stakeholder alignment, and data-driven decision-making, with a proven record of improving adoption and retention by <strong>15–25%</strong>.
-            </p>
-            <p className="text-lg">
-              What drives me most is the intersection of customer needs, technical feasibility, and business value. I believe great products come from deep customer understanding, rigorous experimentation, and seamless cross-functional collaboration.
-            </p>
+      <section id="about" className="py-24 px-6 bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cgrid fill="none" stroke="%2310b981" stroke-width="1" opacity="0.1"/%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-5xl font-light text-slate-800 mb-12 text-center">
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">About Me</span>
+          </h2>
+          <div className="prose prose-lg mx-auto text-slate-600 leading-relaxed">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-emerald-100 hover:border-emerald-200 group">
+              <p className="text-xl mb-6 group-hover:text-slate-700 transition-colors duration-300">
+                I'm a Product Manager with 6+ years of experience in SaaS, passionate about transforming ideas into products that users love. I specialize in <strong className="text-emerald-600">0→1 product launches</strong>, MVP development, and rapid go-to-market execution.
+              </p>
+              <p className="text-lg mb-6 group-hover:text-slate-700 transition-colors duration-300">
+                My journey has been defined by collaborating with entrepreneurs, designers, and developers to translate vision into functional products. I'm skilled in Agile methodologies, stakeholder alignment, and data-driven decision-making, with a proven record of improving adoption and retention by <strong className="text-teal-600">15–25%</strong>.
+              </p>
+              <p className="text-lg group-hover:text-slate-700 transition-colors duration-300">
+                What drives me most is the intersection of customer needs, technical feasibility, and business value. I believe great products come from deep customer understanding, rigorous experimentation, and seamless cross-functional collaboration.
+              </p>
+            </div>
           </div>
         </div>
       </section>
