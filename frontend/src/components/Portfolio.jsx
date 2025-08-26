@@ -191,6 +191,7 @@ const Portfolio = () => {
             <Button 
               variant="outline" 
               className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 hover:scale-105 transition-all duration-200"
+              onClick={() => window.open('https://customer-assets.emergentagent.com/job_mvp-builder-7/artifacts/azzlbcs1_Prakrati%20Chaudhary_Deepwatch%20Resume.pdf', '_blank')}
             >
               <Download className="w-4 h-4 mr-2" />
               Download Resume
