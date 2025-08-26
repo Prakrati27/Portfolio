@@ -14,6 +14,7 @@ const API = `${BACKEND_URL}/api`;
 
 const Portfolio = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
