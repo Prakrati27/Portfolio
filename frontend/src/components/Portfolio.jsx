@@ -452,7 +452,7 @@ const Portfolio = () => {
                 <div className="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-lg">
                   <h4 className="text-xl font-bold text-gray-800 mb-3">Why it Matters</h4>
                   <p className="text-gray-700 text-lg">
-                    Proves ability to deliver <strong className="text-teal-600">0→1 AI innovation</strong> with tangible productivity impact at enterprise scale.
+                    Proves ability to deliver <strong className="text-teal-600">0-to-1 AI innovation</strong> with tangible productivity impact at enterprise scale.
                   </p>
                 </div>
 
