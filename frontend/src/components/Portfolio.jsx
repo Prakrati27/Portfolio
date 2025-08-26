@@ -399,165 +399,313 @@ const Portfolio = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">Flagship Projects</h2>
           
-          <div className="space-y-12">
-            {/* Project 1 */}
+          <div className="space-y-16">
+            {/* Project 1 - AI-Powered Hire Automation */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-gray-200">
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-2xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
-                    AI-Powered Hire Automation
+                  <CardTitle className="text-3xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
+                    1. AI-Powered Hire Automation
                   </CardTitle>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors" />
+                  <ExternalLink className="w-6 h-6 text-gray-400 group-hover:text-teal-600 transition-colors" />
                 </div>
-                <CardDescription className="text-lg text-gray-600">
-                  Intelligent recruitment pipeline automation
-                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4">
-                    <h4 className="font-semibold text-red-800 mb-2">Challenge</h4>
-                    <p className="text-red-700">Recruiters faced manual screening bottlenecks and pipeline inefficiency.</p>
+              <CardContent className="space-y-6">
+                {/* Challenge */}
+                <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-red-800 mb-3">Challenge</h4>
+                  <p className="text-red-700 text-lg">
+                    Recruiters faced manual screening bottlenecks and inconsistent evaluation, slowing down hiring cycles.
+                  </p>
+                </div>
+
+                {/* Action */}
+                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-blue-800 mb-3">Action</h4>
+                  <ul className="text-blue-700 text-lg space-y-2">
+                    <li>• Built an <strong>AI recruiter assistant</strong> powered by GPT-4, semantic search, and automation workflows</li>
+                    <li>• Designed an <strong>event → condition → action</strong> automation builder for recruiters to configure their own flows</li>
+                    <li>• Delivered MVP in <strong>12 weeks</strong> with engineering + design teams under high ambiguity</li>
+                  </ul>
+                </div>
+
+                {/* Impact */}
+                <div className="bg-teal-50 border-l-4 border-teal-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-teal-800 mb-3">Impact</h4>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">🚀 +25%</div>
+                      <div className="text-teal-700">recruiter efficiency</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">👥 10K+</div>
+                      <div className="text-teal-700">recruiter users</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">⚡ 40%</div>
+                      <div className="text-teal-700">reduction in screening time</div>
+                    </div>
                   </div>
-                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
-                    <h4 className="font-semibold text-blue-800 mb-2">Action</h4>
-                    <p className="text-blue-700">Built AI recruiter assistant (GPT-4, semantic search, automation) → MVP in 12 weeks.</p>
+                </div>
+
+                {/* Why it Matters */}
+                <div className="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Why it Matters</h4>
+                  <p className="text-gray-700 text-lg">
+                    Proves ability to deliver <strong className="text-teal-600">0→1 AI innovation</strong> with tangible productivity impact at enterprise scale.
+                  </p>
+                </div>
+
+                {/* Screenshots Section */}
+                <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Key Features Delivered</h4>
+                  <div className="space-y-4">
+                    <div className="bg-white p-4 rounded-lg shadow-sm">
+                      <h5 className="font-semibold text-gray-800 mb-2">🔄 Automation Flow Setup</h5>
+                      <p className="text-gray-600 text-sm italic">Configurable automation flow: recruiters set events for applicant screening.</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm">
+                      <h5 className="font-semibold text-gray-800 mb-2">⚙️ Conditions Builder</h5>
+                      <p className="text-gray-600 text-sm italic">Dynamic conditions (e.g., experience >2 years) → streamlines shortlisting.</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm">
+                      <h5 className="font-semibold text-gray-800 mb-2">🎯 Action Triggers</h5>
+                      <p className="text-gray-600 text-sm italic">Automated recruiter actions like reject, on-hold, or notify → reduces manual workload.</p>
+                    </div>
                   </div>
-                  <div className="bg-teal-50 border-l-4 border-teal-400 p-4">
-                    <h4 className="font-semibold text-teal-800 mb-2">Impact</h4>
-                    <ul className="text-teal-700 space-y-1">
-                      <li>• +25% recruiter efficiency</li>
-                      <li>• Scaled to 10K+ users</li>
-                      <li>• 40% reduction in manual screening time</li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-teal-100 text-teal-800">AI/ML</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">GPT-4</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">Semantic Search</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">MVP Development</Badge>
-                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">AI/ML</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">GPT-4</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Semantic Search</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Automation Workflows</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">MVP Development</Badge>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Project 2 */}
+            {/* Project 2 - LMS Revamp + Udemy Integration */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-gray-200">
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-2xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
-                    LMS Revamp + Udemy Integration
+                  <CardTitle className="text-3xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
+                    2. LMS Revamp + Udemy Integration
                   </CardTitle>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors" />
+                  <ExternalLink className="w-6 h-6 text-gray-400 group-hover:text-teal-600 transition-colors" />
                 </div>
-                <CardDescription className="text-lg text-gray-600">
-                  Complete learning management system overhaul
-                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4">
-                    <h4 className="font-semibold text-red-800 mb-2">Challenge</h4>
-                    <p className="text-red-700">Legacy LMS suffered from low engagement & fragmented discovery.</p>
+              <CardContent className="space-y-6">
+                {/* Challenge */}
+                <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-red-800 mb-3">Challenge</h4>
+                  <p className="text-red-700 text-lg">
+                    Legacy LMS suffered from poor adoption, low completion, and fragmented discovery.
+                  </p>
+                </div>
+
+                {/* Action */}
+                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-blue-800 mb-3">Action</h4>
+                  <ul className="text-blue-700 text-lg space-y-2">
+                    <li>• Led complete <strong>UX revamp</strong> with modern dashboards and ILT (Instructor-Led Training)</li>
+                    <li>• Integrated <strong>Udemy + LinkedIn Learning</strong> with SSO and real-time progress sync</li>
+                    <li>• Added <strong>personalized analytics & recommendations</strong> for learner engagement</li>
+                  </ul>
+                </div>
+
+                {/* Impact */}
+                <div className="bg-teal-50 border-l-4 border-teal-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-teal-800 mb-3">Impact</h4>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">📈 +15%</div>
+                      <div className="text-teal-700">course completion</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">📊 +20%</div>
+                      <div className="text-teal-700">adoption (50K+ learners)</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">🔄 +25%</div>
+                      <div className="text-teal-700">engagement</div>
+                    </div>
                   </div>
-                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
-                    <h4 className="font-semibold text-blue-800 mb-2">Action</h4>
-                    <p className="text-blue-700">End-to-end UX revamp, added ILT, integrated Udemy/LinkedIn Learning, improved analytics & recs.</p>
+                </div>
+
+                {/* Why it Matters */}
+                <div className="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Why it Matters</h4>
+                  <p className="text-gray-700 text-lg">
+                    Demonstrates ability to scale <strong className="text-teal-600">ecosystem integrations</strong> while improving learner outcomes.
+                  </p>
+                </div>
+
+                {/* Key Feature */}
+                <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Key Integration Achievement</h4>
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <h5 className="font-semibold text-gray-800 mb-2">🎓 Unified Learning Catalog</h5>
+                    <p className="text-gray-600 text-sm italic">Udemy & LinkedIn Learning courses inside the LMS catalog → richer discovery and new adoption hooks.</p>
                   </div>
-                  <div className="bg-teal-50 border-l-4 border-teal-400 p-4">
-                    <h4 className="font-semibold text-teal-800 mb-2">Impact</h4>
-                    <ul className="text-teal-700 space-y-1">
-                      <li>• +15% course completion</li>
-                      <li>• +20% adoption</li>
-                      <li>• +25% engagement</li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-teal-100 text-teal-800">UX Design</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">API Integration</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">Analytics</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">Learning Tech</Badge>
-                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">UX Design</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">API Integration</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">SSO</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Analytics</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Learning Tech</Badge>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Project 3 */}
+            {/* Project 3 - Workforce Planning Module */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-gray-200">
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-2xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
-                    Workforce Planning Module (MPP)
+                  <CardTitle className="text-3xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
+                    3. Workforce Planning Module (MPP)
                   </CardTitle>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors" />
+                  <ExternalLink className="w-6 h-6 text-gray-400 group-hover:text-teal-600 transition-colors" />
                 </div>
-                <CardDescription className="text-lg text-gray-600">
-                  Enterprise manpower planning and forecasting
-                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4">
-                    <h4 className="font-semibold text-red-800 mb-2">Challenge</h4>
-                    <p className="text-red-700">HR lacked structured budget/headcount forecasting.</p>
+              <CardContent className="space-y-6">
+                {/* Challenge */}
+                <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-red-800 mb-3">Challenge</h4>
+                  <p className="text-red-700 text-lg">
+                    Enterprises lacked structured workforce planning, relying on manual spreadsheets for budgeting and headcount.
+                  </p>
+                </div>
+
+                {/* Action */}
+                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-blue-800 mb-3">Action</h4>
+                  <ul className="text-blue-700 text-lg space-y-2">
+                    <li>• Built a <strong>manpower planning module</strong> linked to job architecture</li>
+                    <li>• Added placeholders for open roles, automatic requisition triggers, and approval workflows</li>
+                    <li>• Partnered with GTM teams to launch as a strategic enterprise planning tool</li>
+                  </ul>
+                </div>
+
+                {/* Impact */}
+                <div className="bg-teal-50 border-l-4 border-teal-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-teal-800 mb-3">Impact</h4>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">🏢 100+</div>
+                      <div className="text-teal-700">enterprise clients</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">📊 500+</div>
+                      <div className="text-teal-700">employees each</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">⚡ Proactive</div>
+                      <div className="text-teal-700">vs reactive hiring</div>
+                    </div>
                   </div>
-                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
-                    <h4 className="font-semibold text-blue-800 mb-2">Action</h4>
-                    <p className="text-blue-700">Designed module using job architecture; placeholders, auto-requisition flows, budget guardrails.</p>
+                </div>
+
+                {/* Why it Matters */}
+                <div className="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Why it Matters</h4>
+                  <p className="text-gray-700 text-lg">
+                    Illustrates ability to solve <strong className="text-teal-600">ambiguous cross-functional problems</strong> with scalable SaaS solutions.
+                  </p>
+                </div>
+
+                {/* Key Feature */}
+                <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Strategic Planning Dashboard</h4>
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <h5 className="font-semibold text-gray-800 mb-2">📊 Budget & Headcount Control</h5>
+                    <p className="text-gray-600 text-sm italic">Headcount + budget allocation vs usage → enabling proactive workforce planning and approvals.</p>
                   </div>
-                  <div className="bg-teal-50 border-l-4 border-teal-400 p-4">
-                    <h4 className="font-semibold text-teal-800 mb-2">Impact</h4>
-                    <ul className="text-teal-700 space-y-1">
-                      <li>• Rolled out to 100+ enterprise clients</li>
-                      <li>• Supported orgs with 500+ employees</li>
-                      <li>• Enabled proactive hiring vs reactive backfills</li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-teal-100 text-teal-800">Enterprise Software</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">Workforce Analytics</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">Budget Planning</Badge>
-                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Enterprise Software</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Workforce Analytics</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Budget Planning</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Job Architecture</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Approval Workflows</Badge>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Project 4 */}
+            {/* Project 4 - Bell Curve Calibration System */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-gray-200">
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-2xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
-                    Bell Curve Calibration System
+                  <CardTitle className="text-3xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
+                    4. Bell Curve Calibration System
                   </CardTitle>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors" />
+                  <ExternalLink className="w-6 h-6 text-gray-400 group-hover:text-teal-600 transition-colors" />
                 </div>
-                <CardDescription className="text-lg text-gray-600">
-                  Performance review calibration and fairness
-                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4">
-                    <h4 className="font-semibold text-red-800 mb-2">Challenge</h4>
-                    <p className="text-red-700">Inconsistent performance review calibration.</p>
+              <CardContent className="space-y-6">
+                {/* Challenge */}
+                <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-red-800 mb-3">Challenge</h4>
+                  <p className="text-red-700 text-lg">
+                    Performance reviews were inconsistent, creating fairness issues and weak downstream analytics.
+                  </p>
+                </div>
+
+                {/* Action */}
+                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-blue-800 mb-3">Action</h4>
+                  <ul className="text-blue-700 text-lg space-y-2">
+                    <li>• Designed <strong>bell curve distribution + calibration dashboard</strong> with outlier handling</li>
+                    <li>• Added audit trails and clear labels ("Expected % of employees") for transparency</li>
+                    <li>• Rolled out across performance cycles with manager + HRBP enablement</li>
+                  </ul>
+                </div>
+
+                {/* Impact */}
+                <div className="bg-teal-50 border-l-4 border-teal-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-teal-800 mb-3">Impact</h4>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">📈 Improved</div>
+                      <div className="text-teal-700">fairness & transparency</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">🧩 100+</div>
+                      <div className="text-teal-700">enterprise clients</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                      <div className="text-2xl font-bold text-teal-600 mb-1">⚡ Enhanced</div>
+                      <div className="text-teal-700">analytics pipeline</div>
+                    </div>
                   </div>
-                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
-                    <h4 className="font-semibold text-blue-800 mb-2">Action</h4>
-                    <p className="text-blue-700">Configurable bell curve distributions, dashboards, outlier handling, audit trails.</p>
+                </div>
+
+                {/* Why it Matters */}
+                <div className="bg-gray-50 border-l-4 border-gray-400 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-gray-800 mb-3">Why it Matters</h4>
+                  <p className="text-gray-700 text-lg">
+                    Balances <strong className="text-teal-600">policy configurability + UX clarity</strong> in a sensitive HR domain — influencing both culture and analytics.
+                  </p>
+                </div>
+
+                {/* Key Feature */}
+                <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Calibration Intelligence</h4>
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <h5 className="font-semibold text-gray-800 mb-2">📊 Performance Distribution Dashboard</h5>
+                    <p className="text-gray-600 text-sm italic">Expected vs. actual performance distribution → enabling fairer calibration decisions.</p>
                   </div>
-                  <div className="bg-teal-50 border-l-4 border-teal-400 p-4">
-                    <h4 className="font-semibold text-teal-800 mb-2">Impact</h4>
-                    <ul className="text-teal-700 space-y-1">
-                      <li>• Improved fairness + transparency</li>
-                      <li>• Scaled calibration across 100+ clients</li>
-                      <li>• Strengthened downstream analytics</li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-teal-100 text-teal-800">Performance Management</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">Data Analytics</Badge>
-                    <Badge className="bg-teal-100 text-teal-800">Enterprise HR</Badge>
-                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Performance Management</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Data Analytics</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Enterprise HR</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Audit Trails</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 text-sm px-3 py-1">Process Transparency</Badge>
                 </div>
               </CardContent>
             </Card>
