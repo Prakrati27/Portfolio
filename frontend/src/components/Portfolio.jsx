@@ -543,12 +543,8 @@ const Portfolio = () => {
                     <span>cprakrati27@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-3 text-slate-300 group-hover:text-slate-200 transition-colors duration-300 hover:translate-x-1">
-                    <Phone className="w-5 h-5 text-purple-400" />
-                    <span>+1 (555) 123-4567</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-slate-300 group-hover:text-slate-200 transition-colors duration-300 hover:translate-x-1">
                     <MapPin className="w-5 h-5 text-indigo-400" />
-                    <span>San Francisco, CA</span>
+                    <span>Bangalore, Karnataka, India</span>
                   </div>
                 </CardContent>
               </Card>
