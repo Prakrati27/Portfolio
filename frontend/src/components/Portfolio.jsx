@@ -481,8 +481,10 @@ const Portfolio = () => {
           
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border-slate-700 bg-slate-800/90 backdrop-blur-sm relative overflow-hidden">
+            <Card className="group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border-slate-700/50 bg-slate-800/30 backdrop-blur-xl relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 backdrop-blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
               <CardHeader className="relative z-10">
                 <CardTitle className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                   Send a Message
