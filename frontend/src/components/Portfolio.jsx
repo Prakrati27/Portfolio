@@ -173,25 +173,25 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative">
+      <section id="about" className="py-24 px-6 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 left-10 w-2 h-2 bg-emerald-300 rounded-full animate-ping"></div>
-          <div className="absolute top-32 right-20 w-1 h-1 bg-teal-400 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce"></div>
+          <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+          <div className="absolute top-32 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce"></div>
         </div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-5xl font-light text-slate-800 mb-12 text-center">
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">About Me</span>
+          <h2 className="text-5xl font-light text-white mb-12 text-center">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">About Me</span>
           </h2>
-          <div className="prose prose-lg mx-auto text-slate-600 leading-relaxed">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-emerald-100 hover:border-emerald-200 group">
-              <p className="text-xl mb-6 group-hover:text-slate-700 transition-colors duration-300">
-                I'm a Product Manager with 6+ years of experience in SaaS, passionate about transforming ideas into products that users love. I specialize in <strong className="text-emerald-600">0→1 product launches</strong>, MVP development, and rapid go-to-market execution.
+          <div className="prose prose-lg mx-auto text-slate-300 leading-relaxed">
+            <div className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border border-slate-700 hover:border-blue-500/30 group">
+              <p className="text-xl mb-6 group-hover:text-slate-200 transition-colors duration-300">
+                I'm a Product Manager with 6+ years of experience in SaaS, passionate about transforming ideas into products that users love. I specialize in <strong className="text-blue-400">0→1 product launches</strong>, MVP development, and rapid go-to-market execution.
               </p>
-              <p className="text-lg mb-6 group-hover:text-slate-700 transition-colors duration-300">
-                My journey has been defined by collaborating with entrepreneurs, designers, and developers to translate vision into functional products. I'm skilled in Agile methodologies, stakeholder alignment, and data-driven decision-making, with a proven record of improving adoption and retention by <strong className="text-teal-600">15–25%</strong>.
+              <p className="text-lg mb-6 group-hover:text-slate-200 transition-colors duration-300">
+                My journey has been defined by collaborating with entrepreneurs, designers, and developers to translate vision into functional products. I'm skilled in Agile methodologies, stakeholder alignment, and data-driven decision-making, with a proven record of improving adoption and retention by <strong className="text-purple-400">15–25%</strong>.
               </p>
-              <p className="text-lg group-hover:text-slate-700 transition-colors duration-300">
+              <p className="text-lg group-hover:text-slate-200 transition-colors duration-300">
                 What drives me most is the intersection of customer needs, technical feasibility, and business value. I believe great products come from deep customer understanding, rigorous experimentation, and seamless cross-functional collaboration.
               </p>
             </div>
