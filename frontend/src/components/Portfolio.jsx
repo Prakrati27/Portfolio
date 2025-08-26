@@ -309,9 +309,9 @@ const Portfolio = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• Launched <strong className="text-teal-600">AI recruiter assistant</strong> → boosted recruiter efficiency by 25%, scaled to 10K+ users</li>
-                  <li>• Shipped <strong className="text-teal-600">Udemy/LinkedIn Learning integrations</strong> → +15% completion, +20% adoption, +25% engagement</li>
-                  <li>• Built <strong>notification preferences & approval workflow framework</strong> → reduced noise, improved governance</li>
+                  <li>• Launched <strong className="text-teal-600">AI recruiter assistant</strong> boosted recruiter efficiency by 25%, scaled to 10K+ users</li>
+                  <li>• Shipped <strong className="text-teal-600">Udemy/LinkedIn Learning integrations</strong> +15% completion, +20% adoption, +25% engagement</li>
+                  <li>• Built <strong>notification preferences & approval workflow framework</strong> reduced noise, improved governance</li>
                   <li>• Recognized with <strong>spot awards</strong> for leadership impact</li>
                 </ul>
               </CardContent>
