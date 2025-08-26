@@ -120,40 +120,50 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 pt-20">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="min-h-screen flex items-center justify-center px-6 pt-20 bg-gradient-to-br from-slate-50 via-white to-emerald-50 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-emerald-200/30 to-teal-200/30 blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-br from-teal-200/30 to-emerald-200/30 blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-8 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full animate-pulse"></div>
-              <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center">
-                <span className="text-4xl font-bold text-gray-800">PM</span>
+            <div className="w-32 h-32 mx-auto mb-8 relative group cursor-pointer">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full animate-pulse group-hover:scale-110 transition-transform duration-500"></div>
+              <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center group-hover:bg-emerald-50 transition-colors duration-300">
+                <span className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">PM</span>
               </div>
+              {/* Rotating ring animation */}
+              <div className="absolute inset-0 border-2 border-emerald-300 rounded-full animate-spin opacity-20"></div>
+              <div className="absolute inset-4 border border-teal-300 rounded-full animate-ping opacity-30"></div>
             </div>
           </div>
-          <h1 className="text-6xl md:text-8xl font-light text-gray-900 mb-6 tracking-tight">
-            Product Manager
+          <h1 className="text-6xl md:text-8xl font-light text-slate-800 mb-6 tracking-tight">
+            <span className="inline-block hover:scale-105 transition-transform duration-300 cursor-default">Product</span>{' '}
+            <span className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-default">Manager</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-light leading-relaxed">
-            6+ years building SaaS products from 0→1<br />
-            <span className="text-gray-400">Specializing in MVP development & rapid go-to-market execution</span>
+          <p className="text-xl md:text-2xl text-slate-600 mb-8 font-light leading-relaxed">
+            <span className="inline-block hover:text-emerald-600 transition-colors duration-300">6+ years building SaaS products from 0→1</span><br />
+            <span className="text-slate-400 hover:text-teal-500 transition-colors duration-300">Specializing in MVP development & rapid go-to-market execution</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               onClick={() => scrollToSection('projects')}
-              className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 hover:scale-105 transition-all duration-200"
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-3 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-emerald-200 group"
             >
-              View Projects
+              <span className="group-hover:translate-x-1 transition-transform duration-200">View Projects</span>
             </Button>
             <Button 
               onClick={() => scrollToSection('contact')}
               variant="outline" 
-              className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 hover:scale-105 transition-all duration-200"
+              className="border-emerald-300 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-400 px-8 py-3 hover:scale-105 transition-all duration-300 group"
             >
-              Get In Touch
+              <span className="group-hover:translate-x-1 transition-transform duration-200">Get In Touch</span>
             </Button>
           </div>
           <div className="mt-16 animate-bounce">
-            <ChevronDown className="w-6 h-6 text-gray-400 mx-auto cursor-pointer" onClick={() => scrollToSection('about')} />
+            <ChevronDown className="w-6 h-6 text-emerald-400 mx-auto cursor-pointer hover:text-emerald-600 transition-colors duration-300 hover:scale-110" onClick={() => scrollToSection('about')} />
           </div>
         </div>
       </section>
