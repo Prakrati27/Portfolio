@@ -145,7 +145,7 @@ const Portfolio = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Product leader with 6+ years building 0→1 and scaled SaaS platforms for <strong className="text-teal-600">50K+ users across 100+ global enterprises</strong>. Driving adoption, retention, and engagement with <strong className="text-teal-600">AI-driven innovation</strong> and customer-first product design.
+            Product leader with 6+ years building 0-to-1 and scaled SaaS platforms for <strong className="text-teal-600">50K+ users across 100+ global enterprises</strong>. Driving adoption, retention, and engagement with <strong className="text-teal-600">AI-driven innovation</strong> and customer-first product design.
           </p>
 
           {/* Impact Tiles */}
