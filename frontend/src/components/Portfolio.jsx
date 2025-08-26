@@ -319,92 +319,126 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-6">
+      <section id="projects" className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-light text-gray-900 mb-16 text-center">Featured Projects</h2>
+          <h2 className="text-5xl font-light text-slate-800 mb-16 text-center">
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Featured Projects</span>
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
+            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-emerald-200 bg-gradient-to-br from-white to-emerald-50/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute top-4 right-4 w-2 h-2 bg-emerald-400 rounded-full animate-pulse opacity-60"></div>
+              <CardHeader className="relative z-10">
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-semibold text-gray-900">AI-Powered Hire Automation</CardTitle>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                  <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors duration-300">
+                    AI-Powered Hire Automation
+                  </CardTitle>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-all duration-300 group-hover:scale-110" />
                 </div>
-                <CardDescription>Intelligent recruitment pipeline automation</CardDescription>
+                <CardDescription className="group-hover:text-teal-600 transition-colors duration-300">
+                  Intelligent recruitment pipeline automation
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">Built an AI-powered recruiter assistant from concept to MVP in under 12 weeks, integrating GPT-4-powered candidate screening and semantic search.</p>
+              <CardContent className="relative z-10">
+                <p className="text-slate-600 mb-4 group-hover:text-slate-700 transition-colors duration-300">
+                  Built an AI-powered recruiter assistant from concept to MVP in under 12 weeks, integrating GPT-4-powered candidate screening and semantic search.
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge>AI/ML</Badge>
-                  <Badge>GPT-4</Badge>
-                  <Badge>API Integration</Badge>
-                  <Badge>MVP Development</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">AI/ML</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">GPT-4</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">API Integration</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">MVP Development</Badge>
                 </div>
-                <div className="bg-blue-50 p-3 rounded-lg text-sm text-blue-800">
-                  <strong>Impact:</strong> 25% efficiency gain, scaled to 10K+ users
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-3 rounded-lg text-sm border-l-4 border-blue-400 group-hover:shadow-md transition-shadow duration-300">
+                  <strong className="text-blue-800">Impact:</strong> <span className="text-blue-700">25% efficiency gain, scaled to 10K+ users</span>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
+            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-teal-200 bg-gradient-to-br from-white to-teal-50/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-400/10 to-emerald-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute top-4 right-4 w-2 h-2 bg-teal-400 rounded-full animate-pulse opacity-60"></div>
+              <CardHeader className="relative z-10">
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-semibold text-gray-900">Bell Curve Calibration System</CardTitle>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                  <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-teal-700 transition-colors duration-300">
+                    Bell Curve Calibration System
+                  </CardTitle>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-teal-600 transition-all duration-300 group-hover:scale-110" />
                 </div>
-                <CardDescription>Performance management enhancement</CardDescription>
+                <CardDescription className="group-hover:text-emerald-600 transition-colors duration-300">
+                  Performance management enhancement
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">Designed and launched bell-curve calibration feature for performance cycles, improving data completeness and downstream analytics capabilities.</p>
+              <CardContent className="relative z-10">
+                <p className="text-slate-600 mb-4 group-hover:text-slate-700 transition-colors duration-300">
+                  Designed and launched bell-curve calibration feature for performance cycles, improving data completeness and downstream analytics capabilities.
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge>Performance Management</Badge>
-                  <Badge>Data Analytics</Badge>
-                  <Badge>Enterprise SaaS</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Performance Management</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Data Analytics</Badge>
+                  <Badge className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Enterprise SaaS</Badge>
                 </div>
-                <div className="bg-green-50 p-3 rounded-lg text-sm text-green-800">
-                  <strong>Impact:</strong> 20-30% improvement in HR productivity
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-3 rounded-lg text-sm border-l-4 border-green-400 group-hover:shadow-md transition-shadow duration-300">
+                  <strong className="text-green-800">Impact:</strong> <span className="text-green-700">20-30% improvement in HR productivity</span>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
+            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-cyan-200 bg-gradient-to-br from-white to-cyan-50/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-teal-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute top-4 right-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
+              <CardHeader className="relative z-10">
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-semibold text-gray-900">Learning Platform Integration</CardTitle>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                  <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-cyan-700 transition-colors duration-300">
+                    Learning Platform Integration
+                  </CardTitle>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-cyan-600 transition-all duration-300 group-hover:scale-110" />
                 </div>
-                <CardDescription>Udemy & LinkedIn Learning integration</CardDescription>
+                <CardDescription className="group-hover:text-teal-600 transition-colors duration-300">
+                  Udemy & LinkedIn Learning integration
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">Partnered with Marketing & Content teams to launch learning integrations, creating new acquisition hooks and improving user engagement.</p>
+              <CardContent className="relative z-10">
+                <p className="text-slate-600 mb-4 group-hover:text-slate-700 transition-colors duration-300">
+                  Partnered with Marketing & Content teams to launch learning integrations, creating new acquisition hooks and improving user engagement.
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge>API Integration</Badge>
-                  <Badge>Third-party Integration</Badge>
-                  <Badge>GTM Strategy</Badge>
+                  <Badge className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">API Integration</Badge>
+                  <Badge className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">Third-party Integration</Badge>
+                  <Badge className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">GTM Strategy</Badge>
                 </div>
-                <div className="bg-purple-50 p-3 rounded-lg text-sm text-purple-800">
-                  <strong>Impact:</strong> 25% boost in engagement, new acquisition channels
+                <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-3 rounded-lg text-sm border-l-4 border-purple-400 group-hover:shadow-md transition-shadow duration-300">
+                  <strong className="text-purple-800">Impact:</strong> <span className="text-purple-700">25% boost in engagement, new acquisition channels</span>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
+            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-emerald-200 bg-gradient-to-br from-white to-emerald-50/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute top-4 right-4 w-2 h-2 bg-emerald-400 rounded-full animate-pulse opacity-60"></div>
+              <CardHeader className="relative z-10">
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-semibold text-gray-900">Workforce Planning Module</CardTitle>
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                  <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors duration-300">
+                    Workforce Planning Module
+                  </CardTitle>
+                  <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-all duration-300 group-hover:scale-110" />
                 </div>
-                <CardDescription>Enterprise manpower planning solution</CardDescription>
+                <CardDescription className="group-hover:text-cyan-600 transition-colors duration-300">
+                  Enterprise manpower planning solution
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">Conducted market feasibility studies and delivered customizable enterprise features for performance planning and individual development plans (IDPs).</p>
+              <CardContent className="relative z-10">
+                <p className="text-slate-600 mb-4 group-hover:text-slate-700 transition-colors duration-300">
+                  Conducted market feasibility studies and delivered customizable enterprise features for performance planning and individual development plans (IDPs).
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge>Enterprise SaaS</Badge>
-                  <Badge>Market Research</Badge>
-                  <Badge>Workforce Analytics</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Enterprise SaaS</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Market Research</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Workforce Analytics</Badge>
                 </div>
-                <div className="bg-orange-50 p-3 rounded-lg text-sm text-orange-800">
-                  <strong>Impact:</strong> Scaled across 100+ enterprise clients (50K+ users)
+                <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-3 rounded-lg text-sm border-l-4 border-orange-400 group-hover:shadow-md transition-shadow duration-300">
+                  <strong className="text-orange-800">Impact:</strong> <span className="text-orange-700">Scaled across 100+ enterprise clients (50K+ users)</span>
                 </div>
               </CardContent>
             </Card>
