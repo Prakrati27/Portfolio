@@ -800,7 +800,7 @@ const Portfolio = () => {
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-teal-600 mb-2">3+</div>
-              <div className="text-gray-600">0→1 Launches</div>
+              <div className="text-gray-600">0-to-1 Launches</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-teal-600 mb-2">+15%</div>
