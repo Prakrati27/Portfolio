@@ -184,16 +184,22 @@ const Portfolio = () => {
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">About Me</span>
           </h2>
           <div className="prose prose-lg mx-auto text-slate-300 leading-relaxed">
-            <div className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border border-slate-700 hover:border-blue-500/30 group">
-              <p className="text-xl mb-6 group-hover:text-slate-200 transition-colors duration-300">
-                I'm a Product Manager with 6+ years of experience in SaaS, passionate about transforming ideas into products that users love. I specialize in <strong className="text-blue-400">0→1 product launches</strong>, MVP development, and rapid go-to-market execution.
-              </p>
-              <p className="text-lg mb-6 group-hover:text-slate-200 transition-colors duration-300">
-                My journey has been defined by collaborating with entrepreneurs, designers, and developers to translate vision into functional products. I'm skilled in Agile methodologies, stakeholder alignment, and data-driven decision-making, with a proven record of improving adoption and retention by <strong className="text-purple-400">15–25%</strong>.
-              </p>
-              <p className="text-lg group-hover:text-slate-200 transition-colors duration-300">
-                What drives me most is the intersection of customer needs, technical feasibility, and business value. I believe great products come from deep customer understanding, rigorous experimentation, and seamless cross-functional collaboration.
-              </p>
+            <div className="bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border border-slate-700/50 hover:border-blue-500/30 group relative overflow-hidden">
+              {/* Glass morphism overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <p className="text-xl mb-6 group-hover:text-slate-200 transition-colors duration-300">
+                  I'm a Product Manager with 6+ years of experience in SaaS, passionate about transforming ideas into products that users love. I specialize in <strong className="text-blue-400">0→1 product launches</strong>, MVP development, and rapid go-to-market execution.
+                </p>
+                <p className="text-lg mb-6 group-hover:text-slate-200 transition-colors duration-300">
+                  My journey has been defined by collaborating with entrepreneurs, designers, and developers to translate vision into functional products. I'm skilled in Agile methodologies, stakeholder alignment, and data-driven decision-making, with a proven record of improving adoption and retention by <strong className="text-purple-400">15–25%</strong>.
+                </p>
+                <p className="text-lg group-hover:text-slate-200 transition-colors duration-300">
+                  What drives me most is the intersection of customer needs, technical feasibility, and business value. I believe great products come from deep customer understanding, rigorous experimentation, and seamless cross-functional collaboration.
+                </p>
+              </div>
             </div>
           </div>
         </div>
