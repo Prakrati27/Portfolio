@@ -470,7 +470,7 @@ const Portfolio = () => {
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm">
                       <h5 className="font-semibold text-gray-800 mb-2">🎯 Action Triggers</h5>
-                      <p className="text-gray-600 text-sm italic">Automated recruiter actions like reject, on-hold, or notify → reduces manual workload.</p>
+                      <p className="text-gray-600 text-sm italic">Automated recruiter actions like reject, on-hold, or notify reduces manual workload.</p>
                     </div>
                   </div>
                 </div>
