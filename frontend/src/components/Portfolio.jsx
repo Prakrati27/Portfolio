@@ -811,16 +811,17 @@ const Portfolio = () => {
                     />
                   </div>
                   <div>
-                    <Select name="service" value={formData.service} onValueChange={(value) => setFormData({...formData, service: value})}>
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder="Select Service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="consulting">Product Consulting</SelectItem>
-                        <SelectItem value="ai">AI Workflow Automation</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <select 
+                      name="service" 
+                      value={formData.service} 
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                      required
+                    >
+                      <option value="consulting">Product Consulting</option>
+                      <option value="ai">AI Workflow Automation</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
                   <div>
                     <Textarea
