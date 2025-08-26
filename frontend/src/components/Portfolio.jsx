@@ -283,8 +283,10 @@ const Portfolio = () => {
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Experience</span>
           </h2>
           
-          <Card className="mb-8 group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-1 border-slate-700 bg-slate-800/90 backdrop-blur-sm relative overflow-hidden">
+          <Card className="mb-8 group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-1 border-slate-700/50 bg-slate-800/30 backdrop-blur-xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 backdrop-blur-sm opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 border border-white/5 rounded-lg group-hover:border-white/10 transition-colors duration-500"></div>
             <CardHeader className="relative z-10">
               <div className="flex justify-between items-start">
                 <div>
