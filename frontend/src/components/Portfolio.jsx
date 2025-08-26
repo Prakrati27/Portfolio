@@ -407,7 +407,6 @@ const Portfolio = () => {
                   <CardTitle className="text-3xl font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                     1. AI-Powered Hire Automation
                   </CardTitle>
-                  <ExternalLink className="w-6 h-6 text-gray-400 group-hover:text-teal-600 transition-colors" />
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -456,21 +455,38 @@ const Portfolio = () => {
                   </p>
                 </div>
 
-                {/* Screenshots Section */}
+                {/* Product Screenshots */}
                 <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-lg">
-                  <h4 className="text-xl font-bold text-gray-800 mb-4">Key Features Delivered</h4>
-                  <div className="space-y-4">
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">Product Screenshots</h4>
+                  <div className="space-y-6">
                     <div className="bg-white p-4 rounded-lg shadow-sm">
-                      <h5 className="font-semibold text-gray-800 mb-2">🔄 Automation Flow Setup</h5>
-                      <p className="text-gray-600 text-sm italic">Configurable automation flow: recruiters set events for applicant screening.</p>
+                      <h5 className="font-semibold text-gray-800 mb-3">🔄 Automation Flow Builder</h5>
+                      <img 
+                        src="https://customer-assets.emergentagent.com/job_mvp-builder-7/artifacts/a9ggr31w_Screenshot%202025-08-26%20at%202.10.16%E2%80%AFPM.png" 
+                        alt="Create New Automation - Event to Condition to Action workflow"
+                        className="w-full rounded-lg border border-gray-200 shadow-sm"
+                      />
+                      <p className="text-gray-600 text-sm mt-2 italic">Event-driven automation builder allowing recruiters to configure screening workflows</p>
                     </div>
+                    
                     <div className="bg-white p-4 rounded-lg shadow-sm">
-                      <h5 className="font-semibold text-gray-800 mb-2">⚙️ Conditions Builder</h5>
-                      <p className="text-gray-600 text-sm italic">Dynamic conditions (e.g., experience greater than 2 years) streamlines shortlisting.</p>
+                      <h5 className="font-semibold text-gray-800 mb-3">⚙️ Dynamic Conditions Builder</h5>
+                      <img 
+                        src="https://customer-assets.emergentagent.com/job_mvp-builder-7/artifacts/r4berdao_Screenshot%202025-08-26%20at%202.10.41%E2%80%AFPM.png" 
+                        alt="Conditions builder with experience filtering"
+                        className="w-full rounded-lg border border-gray-200 shadow-sm"
+                      />
+                      <p className="text-gray-600 text-sm mt-2 italic">Smart filtering conditions (e.g., Total work experience greater than 2-4 years) to streamline candidate shortlisting</p>
                     </div>
+                    
                     <div className="bg-white p-4 rounded-lg shadow-sm">
-                      <h5 className="font-semibold text-gray-800 mb-2">🎯 Action Triggers</h5>
-                      <p className="text-gray-600 text-sm italic">Automated recruiter actions like reject, on-hold, or notify reduces manual workload.</p>
+                      <h5 className="font-semibold text-gray-800 mb-3">🎯 Automated Actions</h5>
+                      <img 
+                        src="https://customer-assets.emergentagent.com/job_mvp-builder-7/artifacts/o0337vf1_Screenshot%202025-08-26%20at%202.10.54%E2%80%AFPM.png" 
+                        alt="Action selection dropdown with recruiter actions"
+                        className="w-full rounded-lg border border-gray-200 shadow-sm"
+                      />
+                      <p className="text-gray-600 text-sm mt-2 italic">Configurable actions like Reject, On Hold, Share with team, and Notify to reduce manual workload</p>
                     </div>
                   </div>
                 </div>
