@@ -567,7 +567,12 @@ const Portfolio = () => {
                       <Linkedin className="w-4 h-4 mr-2 group-hover/social:scale-110 transition-transform duration-200" />
                       <span className="group-hover/social:translate-x-0.5 transition-transform duration-200">LinkedIn</span>
                     </Button>
-                    <Button variant="outline" size="sm" className="hover:scale-105 transition-all duration-300 border-purple-500/30 text-purple-400 hover:bg-purple-500/10 hover:border-purple-400 group/social">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="hover:scale-105 transition-all duration-300 border-purple-500/30 text-purple-400 hover:bg-purple-500/10 hover:border-purple-400 group/social"
+                      onClick={() => window.open('https://github.com/Prakrati27', '_blank')}
+                    >
                       <Github className="w-4 h-4 mr-2 group-hover/social:scale-110 transition-transform duration-200" />
                       <span className="group-hover/social:translate-x-0.5 transition-transform duration-200">GitHub</span>
                     </Button>
