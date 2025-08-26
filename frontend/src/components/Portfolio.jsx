@@ -601,11 +601,14 @@ const Portfolio = () => {
                 </CardContent>
               </Card>
 
-              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700">
-                <h3 className="font-semibold text-white mb-2 text-blue-400">Ready to collaborate?</h3>
-                <p className="text-slate-300 text-sm">
-                  I'm always interested in discussing new opportunities, innovative projects, and potential collaborations. Let's build something amazing together!
-                </p>
+              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-xl p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700/50 hover:border-white/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-xl"></div>
+                <div className="relative z-10">
+                  <h3 className="font-semibold text-white mb-2 text-blue-400">Ready to collaborate?</h3>
+                  <p className="text-slate-300 text-sm">
+                    I'm always interested in discussing new opportunities, innovative projects, and potential collaborations. Let's build something amazing together!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
