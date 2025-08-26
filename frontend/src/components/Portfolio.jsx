@@ -264,55 +264,55 @@ const Portfolio = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/30 relative">
+      <section id="experience" className="py-24 px-6 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-light text-slate-800 mb-16 text-center">
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Experience</span>
+          <h2 className="text-5xl font-light text-white mb-16 text-center">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Experience</span>
           </h2>
           
-          <Card className="mb-8 group hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border-emerald-200 bg-white/90 backdrop-blur-sm relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <Card className="mb-8 group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-1 border-slate-700 bg-slate-800/90 backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <CardHeader className="relative z-10">
               <div className="flex justify-between items-start">
                 <div>
-                  <CardTitle className="text-2xl font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors duration-300">
+                  <CardTitle className="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                     Product Manager
                   </CardTitle>
-                  <CardDescription className="text-lg text-slate-600 mt-1 group-hover:text-teal-600 transition-colors duration-300">
+                  <CardDescription className="text-lg text-slate-400 mt-1 group-hover:text-purple-400 transition-colors duration-300">
                     peopleHum (Avniro Group)
                   </CardDescription>
                 </div>
-                <Badge variant="outline" className="text-sm border-emerald-300 text-emerald-700 group-hover:bg-emerald-50 transition-colors duration-300">
+                <Badge variant="outline" className="text-sm border-blue-500/30 text-blue-400 group-hover:bg-blue-500/10 transition-colors duration-300">
                   6+ Years
                 </Badge>
               </div>
             </CardHeader>
             <CardContent className="relative z-10">
-              <div className="space-y-4 text-slate-600 leading-relaxed">
-                <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-4 rounded-lg border-l-4 border-emerald-400 group-hover:shadow-md transition-shadow duration-300">
-                  <p className="group-hover:text-slate-700 transition-colors duration-300">
-                    <strong className="text-emerald-700">Impact:</strong> Increased onboarding conversion by <strong className="text-emerald-600">15%</strong> and customer retention by <strong className="text-teal-600">25%</strong> through data-driven product improvements.
+              <div className="space-y-4 text-slate-300 leading-relaxed">
+                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-4 rounded-lg border-l-4 border-blue-500 group-hover:shadow-md transition-shadow duration-300">
+                  <p className="group-hover:text-slate-200 transition-colors duration-300">
+                    <strong className="text-blue-400">Impact:</strong> Increased onboarding conversion by <strong className="text-blue-300">15%</strong> and customer retention by <strong className="text-purple-300">25%</strong> through data-driven product improvements.
                   </p>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
-                  <div className="bg-white/70 p-4 rounded-lg hover:bg-white/90 transition-colors duration-300">
-                    <h4 className="font-semibold text-slate-800 mb-3 text-emerald-700">Key Achievements:</h4>
+                  <div className="bg-slate-800/70 p-4 rounded-lg hover:bg-slate-700/70 transition-colors duration-300">
+                    <h4 className="font-semibold text-white mb-3 text-blue-400">Key Achievements:</h4>
                     <ul className="space-y-2 text-sm">
-                      <li className="hover:text-slate-700 transition-colors duration-200">• Analyzed funnel drop-offs using SQL and Grafana to inform product roadmap</li>
-                      <li className="hover:text-slate-700 transition-colors duration-200">• Drove strategic integrations to expand ecosystem capabilities</li>
-                      <li className="hover:text-slate-700 transition-colors duration-200">• Owned high-impact feature launches (bell-curve calibration, AI-powered automation)</li>
-                      <li className="hover:text-slate-700 transition-colors duration-200">• Built AI-powered recruiter assistant from concept to MVP in 12 weeks</li>
+                      <li className="hover:text-slate-200 transition-colors duration-200">• Analyzed funnel drop-offs using SQL and Grafana to inform product roadmap</li>
+                      <li className="hover:text-slate-200 transition-colors duration-200">• Drove strategic integrations to expand ecosystem capabilities</li>
+                      <li className="hover:text-slate-200 transition-colors duration-200">• Owned high-impact feature launches (bell-curve calibration, AI-powered automation)</li>
+                      <li className="hover:text-slate-200 transition-colors duration-200">• Built AI-powered recruiter assistant from concept to MVP in 12 weeks</li>
                     </ul>
                   </div>
                   
-                  <div className="bg-white/70 p-4 rounded-lg hover:bg-white/90 transition-colors duration-300">
-                    <h4 className="font-semibold text-slate-800 mb-3 text-teal-700">Collaboration & Leadership:</h4>
+                  <div className="bg-slate-800/70 p-4 rounded-lg hover:bg-slate-700/70 transition-colors duration-300">
+                    <h4 className="font-semibold text-white mb-3 text-purple-400">Collaboration & Leadership:</h4>
                     <ul className="space-y-2 text-sm">
-                      <li className="hover:text-slate-700 transition-colors duration-200">• Mentored junior PMs and collaborated with UX & Engineering</li>
-                      <li className="hover:text-slate-700 transition-colors duration-200">• Partnered with Marketing & Content teams on learning integrations</li>
-                      <li className="hover:text-slate-700 transition-colors duration-200">• Supported enterprise deal cycles with product demos</li>
-                      <li className="hover:text-slate-700 transition-colors duration-200">• Received spot award for leadership impact</li>
+                      <li className="hover:text-slate-200 transition-colors duration-200">• Mentored junior PMs and collaborated with UX & Engineering</li>
+                      <li className="hover:text-slate-200 transition-colors duration-200">• Partnered with Marketing & Content teams on learning integrations</li>
+                      <li className="hover:text-slate-200 transition-colors duration-200">• Supported enterprise deal cycles with product demos</li>
+                      <li className="hover:text-slate-200 transition-colors duration-200">• Received spot award for leadership impact</li>
                     </ul>
                   </div>
                 </div>
