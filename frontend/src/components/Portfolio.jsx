@@ -562,11 +562,16 @@ const Portfolio = () => {
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <div className="flex space-x-4">
-                    <Button variant="outline" size="sm" className="hover:scale-105 transition-all duration-300 border-emerald-300 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-400 group/social">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="hover:scale-105 transition-all duration-300 border-blue-500/30 text-blue-400 hover:bg-blue-500/10 hover:border-blue-400 group/social"
+                      onClick={() => window.open('https://www.linkedin.com/in/prakratichaudhary/', '_blank')}
+                    >
                       <Linkedin className="w-4 h-4 mr-2 group-hover/social:scale-110 transition-transform duration-200" />
                       <span className="group-hover/social:translate-x-0.5 transition-transform duration-200">LinkedIn</span>
                     </Button>
-                    <Button variant="outline" size="sm" className="hover:scale-105 transition-all duration-300 border-teal-300 text-teal-700 hover:bg-teal-50 hover:border-teal-400 group/social">
+                    <Button variant="outline" size="sm" className="hover:scale-105 transition-all duration-300 border-purple-500/30 text-purple-400 hover:bg-purple-500/10 hover:border-purple-400 group/social">
                       <Github className="w-4 h-4 mr-2 group-hover/social:scale-110 transition-transform duration-200" />
                       <span className="group-hover/social:translate-x-0.5 transition-transform duration-200">GitHub</span>
                     </Button>
