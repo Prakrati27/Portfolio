@@ -73,38 +73,44 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-teal-100 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-bold text-gray-900">Portfolio</div>
+            <div className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+              Portfolio
+            </div>
             <div className="hidden md:flex space-x-8">
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200 hover:-translate-y-0.5 transform"
+                className="text-slate-600 hover:text-emerald-600 transition-all duration-300 hover:-translate-y-0.5 transform relative group"
               >
                 About
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('skills')}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200 hover:-translate-y-0.5 transform"
+                className="text-slate-600 hover:text-emerald-600 transition-all duration-300 hover:-translate-y-0.5 transform relative group"
               >
                 Skills
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('experience')}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200 hover:-translate-y-0.5 transform"
+                className="text-slate-600 hover:text-emerald-600 transition-all duration-300 hover:-translate-y-0.5 transform relative group"
               >
                 Experience
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200 hover:-translate-y-0.5 transform"
+                className="text-slate-600 hover:text-emerald-600 transition-all duration-300 hover:-translate-y-0.5 transform relative group"
               >
                 Projects
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-300"></span>
               </button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-gray-900 hover:bg-gray-800 text-white hover:scale-105 transition-all duration-200"
+                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-emerald-200"
               >
                 Contact
               </Button>
