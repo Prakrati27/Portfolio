@@ -155,7 +155,7 @@ const Portfolio = () => {
                 <Rocket className="w-6 h-6 text-teal-600" />
               </div>
               <div className="text-2xl font-bold text-gray-900">3+</div>
-              <div className="text-sm text-gray-600">0→1 launches</div>
+              <div className="text-sm text-gray-600">0-to-1 launches</div>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center justify-center mb-2">
