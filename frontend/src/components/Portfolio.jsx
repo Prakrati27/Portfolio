@@ -200,62 +200,62 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-6 bg-white relative">
+      <section id="skills" className="py-24 px-6 bg-slate-900 relative">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-light text-slate-800 mb-16 text-center">
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Skills & Expertise</span>
+          <h2 className="text-5xl font-light text-white mb-16 text-center">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Skills & Expertise</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-emerald-100 hover:border-emerald-300 bg-gradient-to-br from-white to-emerald-50/30 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Card className="group hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700 hover:border-blue-500/50 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-emerald-700 transition-colors duration-300">
+                <CardTitle className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                   Product Management
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Roadmap & Strategy</Badge>
-                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Adoption & Retention Growth</Badge>
-                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Pricing & Packaging</Badge>
-                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">GTM Planning</Badge>
-                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 transition-colors duration-200 hover:scale-105">Feature Prioritization</Badge>
+                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Roadmap & Strategy</Badge>
+                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Adoption & Retention Growth</Badge>
+                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Pricing & Packaging</Badge>
+                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">GTM Planning</Badge>
+                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors duration-200 hover:scale-105 border-blue-500/30">Feature Prioritization</Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-teal-100 hover:border-teal-300 bg-gradient-to-br from-white to-teal-50/30 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Card className="group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700 hover:border-purple-500/50 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-teal-700 transition-colors duration-300">
+                <CardTitle className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors duration-300">
                   Customer-Centric
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Customer Discovery</Badge>
-                  <Badge variant="secondary" className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Voice of Customer</Badge>
-                  <Badge variant="secondary" className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Competitive Analysis</Badge>
-                  <Badge variant="secondary" className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200 hover:scale-105">Stakeholder Enablement</Badge>
+                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Customer Discovery</Badge>
+                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Voice of Customer</Badge>
+                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Competitive Analysis</Badge>
+                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors duration-200 hover:scale-105 border-purple-500/30">Stakeholder Enablement</Badge>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-cyan-100 hover:border-cyan-300 bg-gradient-to-br from-white to-cyan-50/30 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Card className="group hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 hover:-translate-y-2 border-slate-700 hover:border-indigo-500/50 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <CardTitle className="text-xl font-semibold text-slate-800 group-hover:text-cyan-700 transition-colors duration-300">
+                <CardTitle className="text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors duration-300">
                   Technical & Data
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">SQL</Badge>
-                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">REST APIs & Webhooks</Badge>
-                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">Postman</Badge>
-                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">Grafana</Badge>
-                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">A/B Testing</Badge>
-                  <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 hover:bg-cyan-200 transition-colors duration-200 hover:scale-105">Conversion Analytics</Badge>
+                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">SQL</Badge>
+                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">REST APIs & Webhooks</Badge>
+                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">Postman</Badge>
+                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">Grafana</Badge>
+                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">A/B Testing</Badge>
+                  <Badge variant="secondary" className="bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors duration-200 hover:scale-105 border-indigo-500/30">Conversion Analytics</Badge>
                 </div>
               </CardContent>
             </Card>
