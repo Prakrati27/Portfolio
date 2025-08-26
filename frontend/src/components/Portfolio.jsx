@@ -170,7 +170,11 @@ const Portfolio = () => {
 
       {/* About Section */}
       <section id="about" className="py-24 px-6 bg-gradient-to-br from-emerald-50 via-white to-teal-50 relative">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cgrid fill="none" stroke="%2310b981" stroke-width="1" opacity="0.1"/%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-2 h-2 bg-emerald-300 rounded-full animate-ping"></div>
+          <div className="absolute top-32 right-20 w-1 h-1 bg-teal-400 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce"></div>
+        </div>
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-5xl font-light text-slate-800 mb-12 text-center">
             <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">About Me</span>
