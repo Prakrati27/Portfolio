@@ -889,6 +889,7 @@ const Portfolio = () => {
                       variant="outline" 
                       size="sm" 
                       className="hover:scale-105 transition-all duration-200"
+                      onClick={() => window.open('https://customer-assets.emergentagent.com/job_mvp-builder-7/artifacts/azzlbcs1_Prakrati%20Chaudhary_Deepwatch%20Resume.pdf', '_blank')}
                     >
                       <Download className="w-4 h-4 mr-2" />
                       Resume
